@@ -128,9 +128,9 @@
       <div align="justify">Digunakan untuk membuat direktori atau folder.</div>
       <br/>
 
-        ```md
-          mkdir "ketikan nama folder"
-         ```
+      ```md
+       mkdir "ketikan nama folder"
+      ```
 
       <br/>
       <div align="justify">Contoh kasus : </div>
