@@ -511,8 +511,292 @@
    
    <br/><br/>
       
-### 3 HTML
+### 3 HTML (HyperText Markup Language)
+ - #### Peran HTML pada Web Development
+   <div align="justify">HTML digunakan untuk membuat kerangka website yang juga menampilkan konten pada browser.
+   </div>
+   <br/>
+   
+ - #### Tools pendukung dalam menggunakan HTML
+   <div align="justify">Terdapat 2 _tools_ utama untuk mempersiapkan HTML yaitu Browser (Google Chrome, Microsoft Edge, Firefox, Opera, dan lain sebagainya)    dan Code Editor (VS Code, Sublime text, Notepad, dan lain sebagainya.
+   </div>
+   <br/>
 
+ - #### HTML sederhana
+   <div align="justify">Contoh HTML sederhana : </div>
+   <br/>
+   
+   ```html
+       <html>
+       <head>
+         <title>
+           Judul Website
+         </title>
+       <body>
+           Konten Website
+       </body>
+       </html>
+   ```
+   
+   <br/>
+   Terdapat tag utama di dalam HTML yaitu `<html>` `<head>` `<title>` `<body>` .
+   <br/>
+   
+ - #### Menjalankan HTML secara manual dan menggunakan liver server dari VS Code
+   Menjalankan HTML secara manual dapat dilakukan dengan cara : 
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192154408-00b91705-035b-4dde-a1bf-0ad791a81453.png" width="400"/>
+   <br/>
+   <div align="justify">Cara manual sangatlah tidak efektif karena apabila ingin merubah kode HTML harus tetap menyegarkan kembali halaman website agar dapat    berubah</div>
+   <br/><br/>
+   
+   Menjalankan HTML menggunakan live server dari VS Code:
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192154681-85e52f70-5f77-454f-8d8e-59a4c433f598.png" width="400"/>
+   <br/>
+   <div align="justify">Menggunakan live server untuk pengembangan sangatlah efektif karena tidak perlu menyegarkan website setiap ada perubahan</div>
+   <br/>
+   
+ - #### Implementasi tag HTML yang populer
+   a) IMG
+   Tag ini berfungsi untuk menyisipkan sebuah gambar.
+   <br/>
+   
+   ```html
+       <img src="https://i.ibb.co/KDM5PPr/OIP-1.jpg" alt="OIP-1" />
+   ```
+   
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192155410-45c62c48-6641-42c9-8c09-7c96508e4dda.png" alt="OIP-1" width="400" />
+   <br/>
+   <div align="justify"><i>Source</i> (src) berfungsi untuk memberitahukan sumber gambar. <i>Alternative</i> (alt) berfungsi untuk menampilkan teks apabila      gambar tidak muncul</div>
+   <br/>
+   
+   b) Video
+   Tag ini berfungsi untuk menyisipkan sebuah video.
+   <br/>
+   
+   ```html
+       <video controls>
+        <source src="videoku.mp4" type="video/mp4"/>
+       </video>
+   ```
+   
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192155895-40d244c4-797c-4478-bcc6-aa63dea29c3f.png" alt="OIP-1" width="400" />
+   <br/>
+   <div align="justify">Controls berguna untuk mengatur video bisa <i>play</i> / <i>pause</i>. <i>Source</i> (src) untuk memberitahukan sumber video.            <i>Type</i> untuk memberitahukan tipe dari video.</div>
+   <br/>
+
+   c) Table
+   Tag ini berfungsi untuk membuat sebuah tabel.
+   <br/>
+   
+   ```html
+      <table border="1">
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Umur</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Ihza</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Farhana</td>
+          <td>15</td>
+        </tr>
+      </table>
+   ```
+   
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192156311-43719020-1ca3-4197-b519-aa4e9fcf4a27.png" alt="OIP-1" width="400" />
+   <br/>
+   
+   d) Form
+   Tag ini berfungsi untuk melakukan sebmit data yang ada di dalam input HTML.
+   <br/>
+   
+   ```html
+   <form>
+    <div>
+        <label for="nama">Nama</label>
+        <input type="text" placeholder="masukan nama" name="nama" id="nama">
+    </div>
+    <div>
+        <label for="password">password</label>
+        <input type="password" placeholder="masukan password" name="password" id="password">
+    </div>
+   </form>
+   ```
+   
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192156475-dec1cdd4-f32a-48a9-b69c-6451876761de.png" alt="OIP-1" width="400" />
+   <br/>
+   
+ - #### Memahami dan mengimplementasikan semantic HTML
+   <div align="justify">Semantic HTML merupakan langkah menggunakan elemen HTML sesuai dengan kebutuhan konten. Kegunaan semantic HTML adalah :<br/>
+      a) Meningkatkan Accessibility
+      <br/>
+      b) Meningkatkan SEO
+      <br/>
+      c) Lebih mudah untuk pemeliharaan
+      <br/>
+   </div>
+   <br/>
+   
+   Beberapa tag semantic HTML :
+   <br/>
+   Penerapan `<article>` :
+   <br/>
+   
+   ```html
+   <article>
+    <h2>Hafi Ihza Farhana</h2>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </article>
+   ```
+   
+   <br/>
+   Hasil:
+   <article>
+    <h2>Hafi Ihza Farhana</h2>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </article>
+   
+   <br/>
+   
+   Penerapan `<aside>` :
+   <br/>
+   
+   ```html
+   <aside>
+    <h4>Hafi Ihza Farhana</h4>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </aside>
+   ```
+   
+   <br/>
+   Hasil:
+   <br/>
+   <aside>
+    <h4>Hafi Ihza Farhana</h4>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </aside>
+   
+   <br/>
+   
+   Penerapan `<details>` :
+   <br/>
+   
+   ```html
+   <details>
+    <summary>Hafi Ihza Farhana</summary>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </details>
+   ```
+   
+   <br/>
+   Hasil:
+   <br/>
+   <details>
+    <summary>Hafi Ihza Farhana</summary>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </details>
+   
+   <br/>
+   
+   Penerapan `<footer>` :
+   <br/>
+   
+   ```html
+   <footer>
+    <p>Author: Hafi Ihza Farhana</p>
+   </footer>
+   ```
+   
+   <br/>
+   Hasil:
+   <br/>
+   <footer>
+    <p>Author: Hafi Ihza Farhana</p>
+   </footer>
+   
+   <br/>
+   
+   Penerapan `<header>` :
+   <br/>
+   
+   ```html
+   <header>
+    <h1>Hafi Ihza Farhana</h1>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </header>
+   ```
+   
+   <br/>
+   Hasil:
+   <br/>
+   <header>
+    <h1>A heading here</h1>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </header>
+   
+   <br/>
+   
+   Penerapan `<main>` :
+   <br/>
+   
+   ```html
+   <main>
+    <h1>Hafi Ihza Farhana</h1>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </main>
+   ```
+   
+   <br/>
+   Hasil:
+   <br/>
+   <main>
+    <h1>Hafi Ihza Farhana</h1>
+    <p>Orang keren di UPN Veteran Jawa Timur</p>
+   </main>
+   
+   <br/>
+   
+   Penerapan `<nav>` :
+   <br/>
+   
+   ```html
+   <nav>
+    <a href="https://www.instagram.com/loker_it/">Instagram</a>
+   </nav>
+   ```
+   
+   <br/>
+   Hasil:
+   <br/>
+   <nav>
+    <a href="https://www.instagram.com/loker_it/">Instagram</a>
+   </nav>
+   
+   <br/>
+   
+ - #### Tahap Deployment
+   Langkah-langkah:<br/>
+   a) Menuju ke link berikut : <a href="https://app.netlify.com/teams/hafiihza6/overview">Klik ini</a><br/>
+   b) Cari `<button>` dan pilih "Deploy manually".<br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192157627-12086c43-323f-436a-b331-5f1e61dff706.png" alt="OIP-1" width="400" /> <br/>
+   c) Masukan folder yang akan di-deploy<br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192157789-7c8eaf73-f13d-4528-aea1-02f675c40202.png" alt="OIP-1" width="400" /> <br/>
+   d) Hasil berhasil: <br/>
+   https://ini-adalah-website-saya.netlify.app
+   
+   <br/><br/>
+   
 ### 4 CSS
 
 ### 5 Algorithm
