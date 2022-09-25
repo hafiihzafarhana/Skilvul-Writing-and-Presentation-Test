@@ -797,7 +797,73 @@
    
    <br/><br/>
    
-### 4 CSS
+### 4 CSS (Cascading Style Sheets)
+  - #### Peran CSS pada web development <br/>
+    CSS merupakan bahasa yang digunakan untuk mendesain halaman website. <br/>
+    
+  - #### Cara menyisipkan CSS ke HTML
+    Ada 3 cara dalam menyisipkan CSS ke dalam HTML: <br/>
+    a) Inline (Langsung di dalam element HTML)
+    <br/>
+    
+    ```html
+       <p style="color:green;">Hafi Ihza Farhana</p>
+    ```
+    
+    <br/>
+    
+    b) Internal (Di dalam tag `<style` , tetapi masih di dalam file HTML) 
+    <br/>
+    
+    ```html
+       <style>
+        p{
+         color:red;
+        }  
+       </style>
+    ```
+    
+    <br/>
+    
+    c) Eksternal (di luar halaman HTML) <br/>
+    <i>Styling</i> dilakukan di luar halaman HTML yang dihubungkan dengan :
+    <br/>
+    
+    ```html
+     <head>
+       <link rel="stylesheet" href="style.css">
+     </head>
+    ```
+    
+    <br/>
+
+  - #### Sintaks dasar CSS <br/>
+    Kerangka pada sintaks CSS : <br/>
+
+    ```css
+      tag html, .class, #id {
+        property : value;
+      }    
+    ```
+    
+    <br/>
+    Catatan:
+    a) tag html menunjukan nama-nama element di HTML <br/>
+    b) .class menunjukan class yang didelarasikan (.class bersifat tidak spesifik) <br/>
+    c) #id menunjukan id yang dideklarasikan (#id bersifat spesifik) <br/>
+    
+    <br/>
+    Contoh: <br/>
+    
+    ```css
+      p, .paragraf1, #paragraf2 {
+        color : green;
+      }    
+    ```
+
+  - #### Styling CSS pada halaman HTML
+  - #### Responsive web design menggunakan CSS
+  - #### Flexbox
 
 ### 5 Algorithm
 
