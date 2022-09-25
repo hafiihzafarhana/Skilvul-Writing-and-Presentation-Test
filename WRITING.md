@@ -15,9 +15,19 @@
   </div>
   
 - #### File system structure
-  <div align="justify">Merupakan cara untuk menyimpan sebuah data di dalam sistem. Terdapat beberapa hal di dalam file system yaitu memberi nama dan menyimpan data pada sebuah penyimpanan. Adanya file system ini dapat mempermudah dalam membaca sebuah file atau direktori. Ada beberapa atribut dalam file system seperti nama, penanda, lokasi, jenis file, ukuran, dan waktu.
+  <div align="justify">Merupakan cara untuk menyimpan sebuah data di dalam sistem. Terdapat beberapa hal di dalam file system yaitu memberi nama dan menyimpan data pada sebuah penyimpanan. Adanya file system ini dapat mempermudah dalam membaca sebuah file atau direktori. Ada beberapa atribut dalam file system seperti nama, penanda, lokasi, jenis file, ukuran, dan waktu. Di dalam sistem operasi windows dapat melihat struktur dari file system dengan mengetikan di dalam terminal:                        
   </div>
   
+   ```md
+      tree
+   ```
+   
+   <div align="justify">Contoh kasus:</div><br/>
+   <div align="justify">Bentuk Folder</div><br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192139231-6ad00d37-b368-485e-a323-84c51410c4be.png" width="500"/><br/><br/>
+   <div align="justify">Bentuk Struktur File System</div><br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192139235-5b47a59b-e981-4002-9fc3-da77d819a58e.png" width="500"/>
+
 - #### Beberapa Command:
   - #### Melihat current working directory
   - #### Melihat isi sebuah directory
