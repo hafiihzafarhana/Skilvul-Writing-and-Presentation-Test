@@ -1206,5 +1206,174 @@
     Sebelumnya, di mode destop elemen dengan id `box` memilik lebar sebesar 1000px dan tinggi 100px. Apabila lebar diperkecil dengan maksimal lebar layar         480px, maka elemen dengan id `box` akan berubah lebar menjadi 50px dan tinggi 50px.
 
 ### 5 Algorithm
+  - #### Perbedaan Algoritma dan Data Structure
+    <div align="justify">Algoritma merupakan langkah-langkah yang terstruktur untuk memecahkan sebuah permasalahan, sedangkan struktur data merupakan langkah penyimpanan, pengorganisasian, dan pengaturan banyak data di dalam media penyimpanan komputer sehingga data-data tersebut dapat digunakan secara efisien.</div> <br/>
+    
+  - #### Manfaat Algoritma dan Data Structure
+    <div align="justify">Algoritma dan data struktur memili fungsi untuk memecahkan sebuah permasalahan.</div>
+    Manfaat algoritma : </div><br/>
+      a) Membuat program menjadi lebih sederhana dari sebelumnya. <br/>
+      b) Memudahkan dalam pembuatan program. <br/>
+      c) Mengatasi masalah logika secara terurut. <br/>
+      d) Meminimalisir penulisan program yang berulang-ulang. <br/>
+      e) Program menjadi lebih terstruktur dan rapih. <br/>
+      f) Dokumentasi lebih mudah. <br/>
+      g) Mudah untuk melakukan pemeliharaan. <br/><br/>
+      
+      Manfaat Data Structure : <br/>
+      a) Memudahkan untuk menyimpan dan mengatur data menjadi lebih efisien, rapih, dan terorganisir. <br/>
+      b) Memberikan informasi yang lebih cepat. <br/>
+      c) Meningkatkan efektivitas terhadap algoritma. <br/>
+      d) Mudah melakukan debugging. <br/>
+      e) Mengatur sumber daya dan layanan pada sistem. <br/>
+      f) Menciptakan kecepatan dalam pencarian data. <br/>
+      g) Menegelola big data sehingga terjamin kualitasnya. <br/><br/>
+      
+  - #### Membuat Algoritma sederhana
+    ```md
+    Langkah 1: mulai
+    Langkah 2: Deklarasi variabel angka
+    Langkah 3: Inisialisasi variabel angka
+    Langkah 4: Pengondisian apabila angka dibagi 2 bersisa 0, maka genap. Sebaliknya adalah ganjil
+    Langkah 5: Tampilkan hasil
+    Langkah 6: Selesai
+    ```
+    
+  - #### Menerapkan Algoritma ke dalam bahasa pemrograman
+    Menerapkan algoritma bisa menggunakan semua bahasa pemrograman. Pada saat ini menggunakan C++.
+    ```c++
+    #include <iostream>
+    using namespace std;
+    
+    //mulai
+    int main(){
+      // deklarasi variabel angka
+      int angka;
+      
+      //inisialisasi variabel angka
+      cin>>angka;
+      
+      //pengondisian
+      if(angka % 2 == 0){
+        cout<<angka<<" adalah genap"<<endl;
+      } else {
+        cout<<angka<<" adalah ganjil"<<endl;
+        }
+      return 0;
+    }
+    ```
+    
+    <br/>
+    
+  - #### Big O Notation 
+    Merupakan penggambaran tingkat kompleksitas dari sebuah sistem yang bisa diterapkan dalam ilmu komputer untuk mengelompokan algoritma dalam tingkat           kesulitanya. Pada penerapanya big O notation untuk tingkat lama waktu proses dan resource yang digunakan berbanding lurus dengan bertambahnya data. <br/>
+  
+    <img src="https://miro.medium.com/max/1100/1*RXl6HCx57Eg7T0GGrq0STg.png" alt="OIP-1" width="400" /> <br/>
+    Sumber: Medium: Big O Notation ~ D. Husni Fahri Rizal (04 April 2020)
+    
+    <br/>
+    Dari gambar di atas menunjukan apabila kurva berbanding lurus secara horizontal memiliki proses waktu yang lebih baik. 
+    
+    <br/>
+    Terdapat 2 jenis kompleksitas di dalam Big O notation yaitu kompleksitas dalam waktu yang berarti semakin komplek, maka lamanya pemrosesan semakin           bertambah dan kompleksitas dalam ruang yang berarti semakin komplek, maka penyimpanan akan semakin besar.
+    
+    <br/>
+    
+    Membaca Big O Notation: <br/>
+    a) `O(log n)` yang berarti tingkat kompleksitas berbanding lurus dengan log dari banyaknya jumlah data. <br/>
+    b) `O(1)` yang berarti tingkat kompleksitas bersifat konstan terhadap data yang masu.k <br/>
+    c) `O(n)` yang berarti tingkat kompleksitas berbanding lurus dengan banyaknya data. <br/>
+    d) `O(n+2)` atau O(2n+5) yang berarti tingkat kompleksitas sama dngan `O(n)`
+    
+    <br/>
+    
+  - #### Penyelesaian masalah melalui program
+    Contoh kasus:
+    
+    <br/>
+    
+    ```md
+    Buatlah Algoritma untuk menyelesaikan problem ini
+    William ingin menampilkan deretan nilai dari 0 sampai N.
+    N adalah nilai akhir yang diinputkan.
+    Jika William menginput N dengan nilai 100, maka program akan menampilkan deretan nilai 1, 2, 3, 4, 5, … , 100
+    ```
+    
+    <br/>
+    Coding dengan JavaScript:
+    <br/>
+    
+    ```js
+    let i; 
+    let n = 100;
+    for(i = 0; i < n; i++){
+      console.log(i)
+    } 
+    ```
+    
+    <br/>
+    
+  - #### Menerapkan Algoritma dengan JavaScript
+    Contoh soal:<br/>
+    
+    ```md
+      Tulis program untuk menentukan biaya parkir yang dihitung berdasarkan lama parkir. 
+      lama parkir dihitung dari selisih jam masuk dan jam keluar diinput.
+      Biaya parkir untuk motor adalah 2000 dan biaya parkir untuk mobil adalah 4000.
+    ```
+    
+    <br/>
+    
+    ```js
+      let masuk, keluar, jenis, selisih;
+      masuk = prompt("Masuk jam berapa?")
+      keluar = prompt("Keluar jam berapa?")
+      jenis = prompt("jenis mobil(1) atau motor(2)?")
+      selisih = keluar - masuk;
+      alert(`selisih jam adalah ${selisih}`)
+
+      if(jenis == 1){
+        alert(`Mobil dengan pembayaran sebesar ${selisih * 4000}`)
+      } else if(jenis == 2){
+        alert(`Motor dengan pembayaran sebesar ${selisih * 2000}`)
+      } else{
+        alert("Input salah")
+      }
+    ```
+    
+  - #### Menerapkan Data Structure dengan JavaScript
+    Contoh kasus :
+    
+    ```md
+      Pengguna ingin memasukan sebuah data berbentuk array of object. 
+      Di dalam objek terdapat skema data beruba id, nama, dan umur. 
+      Bagaimana cara menginputkan data array tersebut ke dalam sebuah array dengan 
+      ketentuan penyimpanan data dibebaskan berdasarkan keinginan pengguna. 
+      Setelah itu, tampilkan data tersebut.
+      
+      Catatan: id tidak boleh ditentukan oleh pengguna, tetapi harus otomatis terbuat.
+    ```
+    
+    <br/>
+    
+    ```js
+      let data = []
+
+      let tambahOrang = prompt("Berapa orang yang ingin kamu tambahkan ?")
+
+      if(tambahOrang > 0){
+        for(let i = 0; i<tambahOrang; i++){
+          let nama = prompt("Masukan nama")
+          let umur = parseInt(prompt("berapa umurnya"))
+          let id = data.length + 1;
+          let obj = {id,nama,umur}
+          data.push(obj)
+        }
+      }
+
+      data.map(e => console.log(e.id + " " + e.nama + " " + e.umur))
+    ```
+    
+    <br/><br/>
 
 ### 6 JavaScript Dasar
