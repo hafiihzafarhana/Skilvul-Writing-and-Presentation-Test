@@ -1553,6 +1553,7 @@
         
         <br/>
         Contoh:
+        
         ```js
           for(let i = 0; i < 5; i++){
             console.log(i);
@@ -1572,6 +1573,7 @@
         
         <br/>
         Contoh:
+        
         ```js
           let i = 0;
           while(i<5){
@@ -1583,13 +1585,130 @@
         <br/>
         
       - #### for in
+        Melakukan pengulangan melalui properti pada objek. <br/>
+
+        ```js
+          for(key in object){
+            pernyataan ...
+          }
+        ```
+        
+        <br/>
+        Contoh:
+        
+        ```js
+          let data = {nama1:"Hafi", nama2:"Ihza"}
+          for(let x in data) {
+            console.log(data[x])
+          }
+        ```
+        
+        <br/>
+
       - #### for of
+        Melakukan pengulangan di atas nilai dari setiap iterasi. <br/>
+        
+        ```js
+          for(variabel of iterable){
+            pernyataan ...
+          }
+        ```
+        
+        <br/>
+        Contoh:
+        
+        ```js
+          let data = ["Hafi", "Ihza"]
+          for(let x of data) {
+            console.log(data[x])
+          }
+        ```
+        
+        <br/>
+
       - #### do while
+        Pengulangan ini setidaknya akan mengeksekusi 1 pernyataan meskipun kondisinya salah.
+        
+        ```js
+          do{
+            pernyataan ...
+          } while(kondisi)
+        ```
+        
+        <br/>
+        Contoh:
+        
+        ```js
+          let i = 0
+          do{
+            console.log("hai")
+            i++
+          } while(i<5)
+        ```
 
     <br/><br/>
     
     Contoh conditional di JavaScript
       - #### if..else if..else
+        
+        ```js
+          
+          if(kondisi 1){
+            pernyataan 1 ...
+          } else if(kondisi 2) {
+              pernyataan 2 ...
+            } else{
+                pernyataan sisa ...
+              }
+          
+        ```
+        
+        <br/>
+        Contoh:
+        <br/>
+        
+        ```js
+          let a = 1;
+          if(a == 1){
+            console.log("benar")
+          } else if(kondisi 2) {
+              console.log("salah")
+            } else{
+                console.log("error")
+              }
+        ```
+        
+        <br/>
+
       - #### switch
-    
-      
+
+        ```js
+          switch(ekspresi) {
+            case x:
+              pernyataan ...
+              break;
+            case y:
+              pernyataan ...
+              break;
+            default:
+              pernyataan ...
+          }
+        ```
+        
+        <br/>
+        Contoh:
+        <br/>
+        
+        ```js
+          let a = 1;
+          switch(a) {
+            case 1:
+              console.log("benar")
+              break;
+            case 2:
+              console.log("salah")
+              break;
+            default:
+              console.log("error")
+          }
+        ```
