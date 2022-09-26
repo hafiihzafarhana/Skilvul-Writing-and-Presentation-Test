@@ -847,7 +847,7 @@
     ```
     
     <br/>
-    Catatan:
+    Catatan:>br/>
     a) tag html menunjukan nama-nama element di HTML <br/>
     b) .class menunjukan class yang didelarasikan (.class bersifat tidak spesifik) <br/>
     c) #id menunjukan id yang dideklarasikan (#id bersifat spesifik) <br/>
@@ -862,8 +862,348 @@
     ```
 
   - #### Styling CSS pada halaman HTML
-  - #### Responsive web design menggunakan CSS
+    Langkah styling CSS pada halaman HTML ada 4 cara: <br/>
+    - ##### CSS - Tag Name
+      <div align="justify">CSS - Tag Name merupakan tag HTML secara langsung pada CSS. Penggunaan styling ini akan bersifat global yang berarti mempengaruhi       seluruh tag HTML yang dipanggil menggunaka CSS.</div>
+      <br/>
+      Contoh kasus <br/>
+      
+      `<HTML>` :
+      
+      <br/>
+      
+      ```html
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+            <h1>Hafi Ihza Farhana</h1>
+            <h1>UPN Veteran Jawa Timur</h1>
+            <h1>Berumur 20 tahun</h1>
+          </body>
+        </html>
+      ```
+      
+      <br/>
+      
+      `<CSS>` :
+      
+      ```css
+        h1{
+          color: green;
+          }
+      ```
+      
+      <br/>
+      
+      Contoh kasus di atas menunjukan terdapat 3 element HTML dengan tag yang sama yaitu `<h1>` . Ketiga tag tersebut diberikan sebuah <i>styling</i> yang         menyebabkan ketiga tag tersebut berubah warna menjadi hijau.
+      
+      <br/>
+      Hasil: 
+      <br/>
+      <img src="https://user-images.githubusercontent.com/71125093/192171947-1864a4ca-66e3-4784-be99-c8266d9440e9.png" alt="OIP-1" width="400" />
+      <br/>
+      
+    - ##### CSS - Class Name
+      CSS - Class Name merupakan langkah <i>styling</i> dengan memberikan atribut `class` pada elemen HTML. Apabila ada elemen HTML memiliki nilai `class`         yang sama, maka akan mempunyai <i>styling</i> yang sama.
+      <br/>
+      Contoh kasus <br/>
+      
+      `<HTML>` :
+      
+      <br/>
+      
+      ```html
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+            <div class="box">
+              <p class="teks">Hafi Ihza Farhana</p>
+            </div>
+          </body>
+        </html>
+      ```
+      
+      <br/>
+      
+      `<CSS>` :
+      
+      ```css
+        .box{
+              width: 100px;
+              height: 100px;
+              background-color: brown;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+
+        .teks{
+            color: white;
+            text-align: center;
+        }
+      ```
+      
+      <br/>
+      
+      Contoh kasus di atas menunjukan terdapat 2 elemen HTML yaitu `<div>` dengan `class` `box` dan `<p>` dengan class `teks`. Setiap elemen akan dilakukan           <i>styling</i>.
+      
+      <br/>
+      Hasil: 
+      <br/>
+      <img src="https://user-images.githubusercontent.com/71125093/192172491-0d91b9ab-0f4a-4e52-b6b7-83fa1d9ab6f8.png" alt="OIP-1" width="400" />
+      <br/>
+      
+    - ##### CSS - Multiple Class
+      CSS - Multiple class merupakan langkah <i>styling></i> tetap dengan menggunakan bantuan `class` dan dapat menggunakan lebih dari 1 `class` yangg             berbeda untuk satu elemen HTML.
+      
+      <br/>
+      Contoh kasus <br/>
+      
+      `<HTML>` :
+      
+      <br/>
+      
+      ```html
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+            <p class="warna ukuran">Hafi Ihza Farhana</p>
+          </body>
+        </html>
+      ```
+      
+      <br/>
+      
+      `<CSS>` :
+      
+      ```css
+        .warna{
+            color: green;
+        }
+
+        .ukuran{
+            font-size: 36px;
+        }
+      ```
+      
+      <br/>
+      
+      Contoh kasus di atas menunjukan terdapat elemen HTML yaitu `<p>` dengan 2 `class` yaitu `warna` untuk mengatur warna dan `ukuran` untuk mengatur             ukuran.
+      
+      <br/>
+      Hasil : 
+      <br/>
+      <img src="https://user-images.githubusercontent.com/71125093/192173096-aac83709-6cfb-47d9-9e5d-f9970835850c.png" alt="OIP-1" width="400" />
+      <br/>
+      
+    - ##### CSS - ID Name
+      CSS - ID Name merupakan langkah <i>styling></i> dengan menggunakan atribut `id` . Atribut `id` bernilai spesifik. Jadi hanya akan ada 1 nama `id` pada       elemen HTML.
+      
+      <br/>
+      Contoh kasus <br/>
+      
+      `<HTML>` :
+      
+      <br/>
+      
+      ```html
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+            <div id="box"></div>
+          </body>
+        </html>
+      ```
+      
+      <br/>
+      
+      `<CSS>` :
+      
+      ```css
+        #box{
+          width: 500px;
+          height: 500px;
+          background-color: brown;
+        }
+      ```
+      
+      <br/>
+      
+      Contoh kasus di atas menunjukan tag `<div>` yang memiliki `id` bernama `box`. Proses <i>styling</i> pada CSS menggunakan tanda `#` .
+      
+      <br/>
+      Hasil : 
+      <br/>
+      <img src="https://user-images.githubusercontent.com/71125093/192173461-8236f16c-cd0f-4fd4-81bd-e7c74af7d41b.png" alt="OIP-1" width="400" />
+      <br/>
+      
   - #### Flexbox
+    Flexbox merupakan langkah untuk mengatur layout. Flexbox memiliki kemampuan untuk menyesuaikan layout secara otomatis. Flexbox memiliki <i>parent</i> dan     banyak <i>child</i>.
+    <br/>
+    <img src="https://user-images.githubusercontent.com/71125093/192174973-f40f486a-3f21-4f40-9add-8f947596dfb2.png" alt="OIP-1" width="300" />
+    
+    <br/>
+    
+    - #### Ordering dan orientation:
+    
+         a) `flex-direction` digunakan untuk mengatur letak child item. Ada 4 jenis <i>value</i>:
+       
+             row untuk membentuk sebuah baris dari kiri ke kanan. <br/>
+
+             row-reverse untuk membentuk baris dari kanan ke kiri. <br/>
+
+             column untuk membentuk baris dari atas ke bawah. <br/>
+
+             column-reverse untuk membentuk baris dari bawah ke atas <br/>
+
+         <img src="https://user-images.githubusercontent.com/71125093/192175866-4bd37129-2e0c-44e7-9e7a-da6a4af3908e.png" alt="OIP-1" width="300" />
+          <br/>
+       
+         b) `flex-wrap` digunakan untuk membuat tatal letak item <i>children</i> dalam satu tata letak saja. Ada 3 jenis <i>value</i>:
+
+             no-wrap artinya tidak menggunakan flex-wrap. <br/>
+
+             wrap artinya memiliki beberapa line dari atas ke bawah  jika space dalam 1 line sudah full width. <br/>
+
+             wrap-reverse artinya memiliki beberapa line dari bawah ke atas  jika space dalam 1 line sudah full width. <br/>
+
+      
+         c) `flex-flow` merupakan gabungan dari `flex-wrap` dan `flex-direction`. <br/>
+      
+         d) `order` digunakan untuk memposisikan <i>item</i> yang akan diatur berdasarkan urutan order. Apabila semakin kecil, maka akan diposisikan paling           awal. Namun, apabila `order` bernilai 0 tidak akan berubah karena merupakan <i>default value</i>. <br/>
+      
+     - #### Alignment:
+   
+         a) `justify-content` digunakan untuk mengatur tata letak dan jarak antar <i>item child</i> secara horizontal dan vertikal. Ada 6 jenis:
+
+             flex-start untuk memposisikan <i>item</i> di awal kontainer.
+
+             flex-end untuk memposisikan <i>item</i> di akhir kontainer.
+
+             center untuk memposisikan <i>item</i> di tengah kontainer.
+
+             space-between untuk memposisikan antar ruang di setiap <i>item</i>.
+
+             space-around memiliki jarak sebelum, setelah, dan setelah di tiap <i>item</i>.
+
+             space-evenly memiliki posisi yang sama dengan `space-around` .
+
+          <br/>
+     
+         b) `align-self` digunakan untuk mengatur <i>align</i>. Ada 5 jenis:
+
+             flex-start untuk memposisikan <i>item</i> di awal kontainer.
+
+             flex-end untuk memposisikan <i>item</i> di akhir kontainer.
+
+             center untuk memposisikan <i>item</i> di tengah kontainer.
+
+             baseline memiliki kesamaan dengan `flex-start` .
+
+             stretch untuk memposisikan <i>item</i> dengan full kontainer.
+
+            <br/>
+        
+         c) `align-content` memiliki kesamaan dengan `justify-content` . Hanya saja yang membedakan pada `align-content` terdapat <i>value</i> `stretch` .
+     
+     - #### Flexibility:
+         a) `flex-grow` digunakan untuk mengatur ukuran suatu <i>item child</id> pada flexbox. Nilai harus angka dan tidak boleh minus.
+         
+         b) `flex-shrink` digunakan untuk membuat ukuran suatu <i>item child</i> mengecil secara relatif terhadap <i>item child</i> lainya. Nilai harus angka          dan tidak boleh minus. Semakin besar nilainya, maka semakin kecil ukuran dari suatu <i>item child</i>.
+         
+         c) `flex-basis` digunakan untuk menentukan lebar dari <i>item child</i>. Flexbox tidak bisa menggunakan properti `min-width` dan `max-width`. Ada 4          nilai dari `flex basis` :
+         
+            auto akan menyesuaikan dengan kontenya
+            
+            angka (bisa menggunakan satuan)
+            
+            initial adalah bentuk default
+            
+            inherit akan diturunkan dari <i>parent</i>
+            
+          <br/>
+         
+  - #### Responsive web design menggunakan CSS
+    <div align="justify">Responsive web design merupakan sebuah halaman website yang dapat digunakan di berbagai macam platform seperti mobile, destop,  dan     tablet. Dalam membuat responsive web design hanya bermodalkan HTML5 dan CSS3. CSS memiliki fitur yang bernama CSS media queries yang hanya berada di         CSS3. <br/>
+    CSS media queries dapat melihat : <br/>
+      a) lebar dan tinggi viewport <br/>
+      b) lebar dan tinggi perangkat <br/>
+      c) resolusi <br/>
+      d) orientasi <br/>
+    </div>
+    <br/>
+    
+    Sintaks dari CSS media queries: <br/>
+    ```css
+      @media not|only mediatype and (expressions) {
+        Kode dari CSS;
+      }
+    ```
+    
+    <br/>
+    Contoh kasus:
+    
+    `<html>` :
+    
+    ```html
+      <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+            <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+            <div id="box"></div>
+          </body>
+        </html>
+    ```
+    
+    <br/>
+    
+    ```css
+      #box{
+      width: 1000px;
+      height: 100px;
+      background-color: brown;
+      }
+
+      @media screen and (max-width: 480px) {
+          #box {
+            background-color: lightgreen;
+            width: 50px;
+            height: 50px;
+          }
+        }
+    ```
+    
+    <br/>
+    Hasil : <br/><br/>
+    Mode destop : <br/>
+    <img src="https://user-images.githubusercontent.com/71125093/192185213-377b2bd4-8802-4da8-8dd1-293c16f0c84e.png" alt="OIP-1" width="300" />
+    
+    <br/>
+    Mode mobile : <br/>
+    <img src="https://user-images.githubusercontent.com/71125093/192185313-f4dac478-ef2a-4eb8-aa36-e6075579175c.png" alt="OIP-1" width="300" />
+    
+    <br/>
+    
+    Penjelasan: <br/>
+    Sebelumnya, di mode destop elemen dengan id `box` memilik lebar sebesar 1000px dan tinggi 100px. Apabila lebar diperkecil dengan maksimal lebar layar         480px, maka elemen dengan id `box` akan berubah lebar menjadi 50px dan tinggi 50px.
 
 ### 5 Algorithm
 
