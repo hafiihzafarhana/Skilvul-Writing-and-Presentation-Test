@@ -1265,8 +1265,9 @@
     
     <br/>
     
-  - #### Big O Notation 
-    Merupakan penggambaran tingkat kompleksitas dari sebuah sistem yang bisa diterapkan dalam ilmu komputer untuk mengelompokan algoritma dalam tingkat           kesulitanya. Pada penerapanya big O notation untuk tingkat lama waktu proses dan resource yang digunakan berbanding lurus dengan bertambahnya data. <br/>
+  - #### Big O Notation
+    <div align="justify"> 
+    Merupakan penggambaran tingkat kompleksitas dari sebuah sistem yang bisa diterapkan dalam ilmu komputer untuk mengelompokan algoritma dalam tingkat           kesulitanya. Pada penerapanya big O notation untuk tingkat lama waktu proses dan resource yang digunakan berbanding lurus dengan bertambahnya data.</div>     <br/>
   
     <img src="https://miro.medium.com/max/1100/1*RXl6HCx57Eg7T0GGrq0STg.png" alt="OIP-1" width="400" /> <br/>
     Sumber: Medium: Big O Notation ~ D. Husni Fahri Rizal (04 April 2020)
@@ -1378,13 +1379,217 @@
 
 ### 6 JavaScript Dasar
   - #### Peran JavaScript dalam web development
+    <div align="justify">
     Peran JavaScript dalam pengembangan sebuah website untuk membuat website menjadi lebih interaktif dan dinamis. Interaktif dalam artian dapat memanipulasi     elemen HTML dan CSS. Lalu, hal yang dimaksud dinamis mungkin masih belum tertuju apabila hanya menggunaka vanilla JavaScript. JavaScript menjadi dinamis     untuk memanipulasi sebuah data, apabila telah menggunakan framework JavaScript di bagian Back End. Dikarenakan pada saat ini JavaScript tidak hanya           digunakan untuk Front End, melainkan bisa untuk sisi server (Back End) seperti express JS.
+    </div>
     
     <br/>
     
   - #### Menjalankan JavaScript
-    Cara menjalankan JavaScript dengan cara
-
+    <div align="justify">
+    Cara menjalankan JavaScript hanya dengan membuka sebuah teks editor seperti VS Code dan browser seperti Firefox, Chrome, Microsoft Edge, dan lain             sebagainya. Namun, tidak hanya itu, JavaScript harus dihubungkan terlebih dahulu dengan halaman HTML. JavaScript dihubungkan dengan 2 cara yaitu secara       internal (diletakan ke dalam tag script) dan eksternal (diletakan di luar halaman HTML).
+    </div>
+    
+    <br/>
+    Internal :
+    <br/>
+    
+    ```html
+       <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+            <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+            <script>
+              console.log("check");
+            </script>
+          </body>
+        </html>
+    ```
+    
+    <br/>
+    Eksternal :
+    <br/>
+    
+    ```html
+       <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+            <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+            <script src="app.js"></script>
+          </body>
+        </html>
+    ```
+    
+    <br/>
+    
+    halaman `app.js` :
+    
+    <br/>
+    
+    ```js
+    console.log("hai")
+    ```
+    
   - #### Jenis tipe data di JavaScript
+    Tipe data di dalam JavaScript dibedakan menjadi 2 jenis yaitu tipe data primitif dan tipe data non primitif.
+    <br/>
+    
+    Tipe data primitif: <br/>
+      - #### String
+        Tipe data ini akan bernilai teks yang dibuktikan dengan adanya tanda kutip (".....").<br/>
+      
+      - #### Number
+        Tipe data ini akan bernilai angka, tanpa tanda kutip. <br/>
+
+      - #### Boolean
+        Tipe data ini akan bernilai kebenaran yaitu true (1) atau false (0). <br/>
+
+      - #### Undefined
+        Tipe data ini akan muncul apabila nilai dari suatu variabel belu diinisialisasi.
+
+      - #### Null
+        Tipe data ini akan muncul apabila sebuah variabel diinisialisasi dengan `null`. Namun, bukan berarti tidak memiliki nilai seperti `undefined`.<br/><br/>
+      
+    Tipe data non primitif: <br/>
+      - #### Object
+        Tipe data ini menyimpan sebuah nilai (properti) dan fungsi (method). Object bisa dibangun dengan mendeklarasikan variabel lalu diikuti dengan kurung         kurawal `{}`. Di dalam kurung kurawal tersebut bisa terdiri dari berbagai macam tipe data lainya seperti `String`, `Number`, dan lain-lain. <br/>
+        
+      - #### Array
+        Tipe data ini hampir sama dengan Object yang dapat menyimpan banyak data dan beragam tipe data (untuk JavaScript dan bahasa pemrograman yang                 mendukung banyak data yang bisa menyimpan tipe data yang berbeda). Namun, tidak memiliki properti dan method, maka dari itu mendapatkan data dari             `array` menggunakan indeks yang dimulai dari angka 0. <br/>
+
+      - #### RegExp
+        Tipe data ini berbentuk string teks yang digunakan untuk mencari pola pencarian. <br/><br/>
+
   - #### Operator di JavaScript
+    JavaScript memiliki 6 jenis operator:
+      - #### Operator aritmatika
+      
+          ```md
+           Operator (+) untuk penambahan
+           Operator (-) untuk pengurangan
+           Operator (*) untuk pengalian
+           Operator (**) untuk pangkat
+           Operator (/) untuk pembagian
+           Operator (%) untuk mencari hasil bagi
+           Operator (++) untuk menambahkan 1
+           Operator (--) untuk mengurangi 1
+          ```
+          
+          <br/>
+          
+      - #### Operator penugasan
+        
+        ```md
+           Operator (=)   contoh : x = y
+           Operator (+=)  contoh (x += y) == (x = x + y)
+           Operator (-=)  contoh (x -= y) == (x = x - y)
+           Operator (*=)  contoh (x *= y) == (x = x * y)
+           Operator (/=)  contoh (x /= y) == (x = x / y)
+           Operator (%=)  contoh (x %= y) == (x = x % y)
+           Operator (**=) contoh (x **= y) == (x = x ** y)
+          ```
+          
+          <br/>
+
+      - #### Operator perbandingan
+
+        ```md
+           Operator (==)   digunakan untuk membandingkan kesamaan sebuah nilai
+           Operator (===)  digunakan untuk membandingkan kesamaan sebuah nilai dan tipe data dari nilai
+           Operator (!=)   digunakan untuk membandingkan ketidaksamaan sebuah nilai
+           Operator (!==)  digunakan untuk membandingkan ketidaksamaan sebuah nilai dan tipe data dari nilai
+           Operator (>)    digunakan untuk membandingkan lebih besar
+           Operator (<)    digunakan untuk membandingkan lebih kecil
+           Operator (>=)   digunakan untuk membandingkan lebih besar atau sama dengan
+           Operator (<=)   digunakan untuk membandingkan lebih kecil atau sama dengan
+           Operator (?)    merupakan operator ternari
+          ```
+          
+          <br/>
+
+      - #### Operator logika
+        
+        ```md
+           Operator (&&)   logika AND
+           Operator (||)   logika OR
+           Operator (!)    logika NOT
+          ```
+          
+          <br/>
+
+      - #### Operator tipe
+         ```md
+           Operator typeof       mengembalikan jenis tipe data
+           Operator instanceof   mengembalikan TRUE apabila bertipe objek
+          ```
+          
+          <br/>
+        
+    
   - #### Control flow (looping & conditional)
+    Control flow ada 2 yaitu looping untuk pengulangan dan conditional untuk pengondisian. <br/>
+    Contoh looping di JavaScript:<br/>
+      
+      - #### for
+        Di dalam pengulangan for terdapat komponen utama yaitu initial statement, test expression, dan update statement. <br/>
+        
+        ```js
+          for(initial statement; test expression; update statement){
+            pernyataan ...
+          }
+        ```
+        
+        <br/>
+        Contoh:
+        ```js
+          for(let i = 0; i < 5; i++){
+            console.log(i);
+          }
+        ```
+        
+        <br/>
+        
+      - #### while
+        Pengulangan while akan dieksekusi apabila pengondisianya sesuai. <br/>
+        
+        ```js
+          while(kondisi) {
+             pernyataan ...
+          }
+        ```
+        
+        <br/>
+        Contoh:
+        ```js
+          let i = 0;
+          while(i<5){
+            console.log(i);
+            i++;
+          }
+        ```
+        
+        <br/>
+        
+      - #### for in
+      - #### for of
+      - #### do while
+
+    <br/><br/>
+    
+    Contoh conditional di JavaScript
+      - #### if..else if..else
+      - #### switch
+    
+      
