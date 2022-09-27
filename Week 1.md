@@ -518,7 +518,7 @@
    <br/>
    
  - #### Tools pendukung dalam menggunakan HTML
-   <div align="justify">Terdapat 2 _tools_ utama untuk mempersiapkan HTML yaitu Browser (Google Chrome, Microsoft Edge, Firefox, Opera, dan lain sebagainya)    dan Code Editor (VS Code, Sublime text, Notepad, dan lain sebagainya.
+   <div align="justify">Terdapat 2 <i>tools</i> utama untuk mempersiapkan HTML yaitu Browser (Google Chrome, Microsoft Edge, Firefox, Opera, dan lain sebagainya)    dan Code Editor (VS Code, Sublime text, Notepad, dan lain sebagainya.
    </div>
    <br/>
 
