@@ -650,9 +650,14 @@
    </div>
    <br/>
    
+   <img src="https://www.w3schools.com/html/img_sem_elements.gif" width="400"/>
+   
+   <br/>
+   
    Beberapa tag semantic HTML :
    <br/>
-   Penerapan `<article>` :
+   Penerapan `<article>` : <br/>
+   Digunakan untuk menentukan konten mandiri.
    <br/>
    
    ```html
@@ -671,7 +676,8 @@
    
    <br/>
    
-   Penerapan `<aside>` :
+   Penerapan `<aside>` :<br/>
+   Digunakan untuk membuat konten yang ditempatkan di sisi sebelah.
    <br/>
    
    ```html
@@ -691,7 +697,8 @@
    
    <br/>
    
-   Penerapan `<details>` :
+   Penerapan `<details>` :<br/>
+   Digunakan untuk menentukan detail tambahan yang bisa dibuka dan ditutup.
    <br/>
    
    ```html
@@ -711,7 +718,8 @@
    
    <br/>
    
-   Penerapan `<footer>` :
+   Penerapan `<footer>` :<br/>
+   Digunakan untuk mendefinisikan bagian bawah.
    <br/>
    
    ```html
@@ -729,7 +737,8 @@
    
    <br/>
    
-   Penerapan `<header>` :
+   Penerapan `<header>` :<br/>
+   Digunakan untuk mendefinisikan bagian heading pada website.
    <br/>
    
    ```html
@@ -749,7 +758,8 @@
    
    <br/>
    
-   Penerapan `<main>` :
+   Penerapan `<main>` :<br/>
+   Digunakan untuk mendefinisikan konten utama.
    <br/>
    
    ```html
@@ -769,7 +779,8 @@
    
    <br/>
    
-   Penerapan `<nav>` :
+   Penerapan `<nav>` :<br/>
+   Digunakan untuk mendefinisikan bagian navigasi.
    <br/>
    
    ```html
