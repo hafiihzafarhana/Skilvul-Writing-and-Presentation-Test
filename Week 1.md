@@ -1412,8 +1412,7 @@
 ### 6 JavaScript Dasar
   - #### Peran JavaScript dalam web development
     <div align="justify">
-    Peran JavaScript dalam pengembangan sebuah website untuk membuat website menjadi lebih interaktif dan dinamis. Interaktif dalam artian dapat memanipulasi     elemen HTML dan CSS. Lalu, disebut dinamis juga karena tidak ada ketentuan tipe data seperti di beberapa variabel harus menggunakan String atau Number.       Pada saat ini, JavaScript tidak hanyak digunakan untuk kepentingan Front end, tetapi bisa untuk back end  
-  <br/>
+    Peran JavaScript dalam pengembangan sebuah website untuk membuat website menjadi lebih interaktif dan dinamis. Interaktif dalam artian dapat memanipulasi     elemen HTML dan CSS. Lalu, disebut dinamis juga karena tidak ada ketentuan tipe data seperti di beberapa variabel harus menggunakan String atau Number.       Pada saat ini, JavaScript tidak hanyak digunakan untuk kepentingan Front end, tetapi bisa untuk back end.
     </div>
     
     <br/>
