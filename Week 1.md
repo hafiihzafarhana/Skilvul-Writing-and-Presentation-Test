@@ -878,7 +878,7 @@
   - #### Styling CSS pada halaman HTML
     Langkah styling CSS pada halaman HTML ada 4 cara: <br/>
     - ##### CSS - Tag Name
-      <div align="justify">CSS - Tag Name merupakan tag HTML secara langsung pada CSS. Penggunaan styling ini akan bersifat global yang berarti mempengaruhi       seluruh tag HTML yang dipanggil menggunaka CSS.</div>
+      <div align="justify">CSS - Tag Name merupakan tag HTML yang diterapkan secara langsung pada CSS. Penggunaan styling ini akan bersifat global yang berarti mempengaruhi       seluruh tag HTML yang dipanggil menggunaka CSS.</div>
       <br/>
       Contoh kasus <br/>
       
