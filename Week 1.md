@@ -539,7 +539,9 @@
    ```
    
    <br/>
+   
    Terdapat tag utama di dalam HTML yaitu `<html>` `<head>` `<title>` `<body>` .
+   
    <br/>
    
  - #### Menjalankan HTML secara manual dan menggunakan liver server dari VS Code
