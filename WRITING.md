@@ -361,7 +361,7 @@
    f) Terdapat 3 fase yaitu working directory (modified), staging area (staged), dan commit (committed)
       - Fase working directory (modified) merupakan kondisi perubahan sudah dilakukan, tetapi belum ditandai (untracked) dan belum disimpan di version               control.
         <br/>
-      - Fase stging area (stagged) merupakan kondisi perubahan telah ditandai (tracked) dan belum disimpan di version control.
+      - Fase staging area (stagged) merupakan kondisi perubahan telah ditandai (tracked) dan belum disimpan di version control.
         <br/>
       - fase commit (committed) merupakan kondisi perubahan telah disimpan pada version control.  
         <br/>
