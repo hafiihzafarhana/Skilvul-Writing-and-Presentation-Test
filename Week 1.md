@@ -860,7 +860,7 @@
     ```
     
     <br/>
-    Catatan:>br/>
+    Catatan:<br/>
     a) tag html menunjukan nama-nama element di HTML <br/>
     b) .class menunjukan class yang didelarasikan (.class bersifat tidak spesifik) <br/>
     c) #id menunjukan id yang dideklarasikan (#id bersifat spesifik) <br/>
