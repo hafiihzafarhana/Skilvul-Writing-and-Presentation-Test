@@ -560,7 +560,7 @@
    <br/>
    
  - #### Implementasi tag HTML yang populer
-   a) IMG
+   a) IMG<br/>
    Tag ini berfungsi untuk menyisipkan sebuah gambar.
    <br/>
    
@@ -574,7 +574,7 @@
    <div align="justify"><i>Source</i> (src) berfungsi untuk memberitahukan sumber gambar. <i>Alternative</i> (alt) berfungsi untuk menampilkan teks apabila      gambar tidak muncul</div>
    <br/>
    
-   b) Video
+   b) Video<br/>
    Tag ini berfungsi untuk menyisipkan sebuah video.
    <br/>
    
@@ -618,7 +618,7 @@
    <img src="https://user-images.githubusercontent.com/71125093/192156311-43719020-1ca3-4197-b519-aa4e9fcf4a27.png" alt="OIP-1" width="400" />
    <br/>
    
-   d) Form
+   d) Form <br/>
    Tag ini berfungsi untuk melakukan sebmit data yang ada di dalam input HTML.
    <br/>
    
