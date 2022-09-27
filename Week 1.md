@@ -1266,7 +1266,7 @@
     Langkah 1: mulai
     Langkah 2: Deklarasi variabel angka
     Langkah 3: Inisialisasi variabel angka
-    Langkah 4: Pengondisian apabila angka dibagi 2 bersisa 0, maka genap. Sebaliknya adalah ganjil
+    Langkah 4: Pengondisian apabila angka dibagi 2 bersisa 0, maka genap. Jika 1 adalah ganjil
     Langkah 5: Tampilkan hasil
     Langkah 6: Selesai
     ```
