@@ -1113,8 +1113,10 @@
              space-around memiliki jarak sebelum, setelah, dan setelah di tiap item.
 
              space-evenly memiliki posisi yang sama dengan `space-around` .
+             
 
           <br/>
+          
      
          b) `align-self` digunakan untuk mengatur <i>align</i>. Ada 5 jenis:
 
@@ -1124,13 +1126,29 @@
 
              center untuk memposisikan item di tengah kontainer.
 
-             baseline memiliki kesamaan dengan `flex-start` .
+             baseline memiliki kesamaan dengan flex-start .
 
              stretch untuk memposisikan item dengan full kontainer.
+             
 
-            <br/>
+          <br/>
+          
         
          c) `align-content` memiliki kesamaan dengan `justify-content` . Hanya saja yang membedakan pada `align-content` terdapat <i>value</i> `stretch` .
+         
+         d) `align-items` digunakan untuk mengatur <i>align</i> dari item child secara vertikal. Ada 5 jenis:
+         
+             flex-start untuk memposisikan item di awal kontainer.
+
+             flex-end untuk memposisikan item di akhir kontainer.
+
+             center untuk memposisikan item di tengah kontainer.
+
+             baseline memiliki kesamaan dengan flex-start .
+
+             stretch untuk memposisikan item dengan full kontainer.
+             
+          <br/>
      
      - #### Flexibility:
          a) `flex-grow` digunakan untuk mengatur ukuran suatu <i>item child</id> pada flexbox. Nilai harus angka dan tidak boleh minus.
