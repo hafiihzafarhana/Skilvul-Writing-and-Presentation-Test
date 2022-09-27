@@ -590,7 +590,7 @@
    <div align="justify">Controls berguna untuk mengatur video bisa <i>play</i> / <i>pause</i>. <i>Source</i> (src) untuk memberitahukan sumber video.            <i>Type</i> untuk memberitahukan tipe dari video.</div>
    <br/>
 
-   c) Table
+   c) Table <br/>
    Tag ini berfungsi untuk membuat sebuah tabel.
    <br/>
    
