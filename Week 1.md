@@ -1074,24 +1074,24 @@
     
          a) `flex-direction` digunakan untuk mengatur letak child item. Ada 4 jenis <i>value</i>:
        
-             row untuk membentuk sebuah baris dari kiri ke kanan. <br/>
+             row untuk membentuk sebuah baris dari kiri ke kanan.
 
-             row-reverse untuk membentuk baris dari kanan ke kiri. <br/>
+             row-reverse untuk membentuk baris dari kanan ke kiri.
 
-             column untuk membentuk baris dari atas ke bawah. <br/>
+             column untuk membentuk baris dari atas ke bawah.
 
-             column-reverse untuk membentuk baris dari bawah ke atas <br/>
+             column-reverse untuk membentuk baris dari bawah ke atas.
 
          <img src="https://user-images.githubusercontent.com/71125093/192175866-4bd37129-2e0c-44e7-9e7a-da6a4af3908e.png" alt="OIP-1" width="300" />
           <br/>
        
          b) `flex-wrap` digunakan untuk membuat tatal letak item <i>children</i> dalam satu tata letak saja. Ada 3 jenis <i>value</i>:
 
-             no-wrap artinya tidak menggunakan flex-wrap. <br/>
+             no-wrap artinya tidak menggunakan flex-wrap.
 
-             wrap artinya memiliki beberapa line dari atas ke bawah  jika space dalam 1 line sudah full width. <br/>
+             wrap artinya memiliki beberapa line dari atas ke bawah  jika space dalam 1 line sudah full width.
 
-             wrap-reverse artinya memiliki beberapa line dari bawah ke atas  jika space dalam 1 line sudah full width. <br/>
+             wrap-reverse artinya memiliki beberapa line dari bawah ke atas  jika space dalam 1 line sudah full width.
 
       
          c) `flex-flow` merupakan gabungan dari `flex-wrap` dan `flex-direction`. <br/>
@@ -1102,15 +1102,15 @@
    
          a) `justify-content` digunakan untuk mengatur tata letak dan jarak antar <i>item child</i> secara horizontal dan vertikal. Ada 6 jenis:
 
-             flex-start untuk memposisikan <i>item</i> di awal kontainer.
+             flex-start untuk memposisikan item di awal kontainer.
 
-             flex-end untuk memposisikan <i>item</i> di akhir kontainer.
+             flex-end untuk memposisikan item di akhir kontainer.
 
-             center untuk memposisikan <i>item</i> di tengah kontainer.
+             center untuk memposisikan item di tengah kontainer.
 
-             space-between untuk memposisikan antar ruang di setiap <i>item</i>.
+             space-between untuk memposisikan antar ruang di setiap item.
 
-             space-around memiliki jarak sebelum, setelah, dan setelah di tiap <i>item</i>.
+             space-around memiliki jarak sebelum, setelah, dan setelah di tiap item.
 
              space-evenly memiliki posisi yang sama dengan `space-around` .
 
@@ -1118,15 +1118,15 @@
      
          b) `align-self` digunakan untuk mengatur <i>align</i>. Ada 5 jenis:
 
-             flex-start untuk memposisikan <i>item</i> di awal kontainer.
+             flex-start untuk memposisikan item di awal kontainer.
 
-             flex-end untuk memposisikan <i>item</i> di akhir kontainer.
+             flex-end untuk memposisikan item di akhir kontainer.
 
-             center untuk memposisikan <i>item</i> di tengah kontainer.
+             center untuk memposisikan item di tengah kontainer.
 
              baseline memiliki kesamaan dengan `flex-start` .
 
-             stretch untuk memposisikan <i>item</i> dengan full kontainer.
+             stretch untuk memposisikan item dengan full kontainer.
 
             <br/>
         
