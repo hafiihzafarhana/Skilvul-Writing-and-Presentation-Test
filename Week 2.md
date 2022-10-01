@@ -117,6 +117,7 @@
   
   <br/>
   Arrow function: <br/>
+  
   ```js
     const data = (param1,param2) => {
       let jumlah = param1 + param2;
