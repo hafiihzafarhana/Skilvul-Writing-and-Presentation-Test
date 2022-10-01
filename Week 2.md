@@ -95,11 +95,92 @@
       
       data()
      ```
+     
+     <br/>
  
 - ### Membuat sebuah fungsi
+  <div align="justify">Fungsi (function) di dalam pemrograman merupakan program yang melakukan tugas tertentu (block code) dan dapat dipanggil terus menerus. Biasanya setiap bahasa pemrograman memiliki fungsi sendiri (built-in functions). Namun, dapat membuat sebuah fungsi sendiri.</div>
+  <br/>
+  
+  Cara membuat fungsi di javaScript ada 2: <br/>
+  Normal function: <br/>
+  
+  ```js
+    function data(param1, param2){
+      let jumlah = param1 + param2;
+      return jumlah;
+    }
+    
+    let hasil = data(5,5);
+    console.log(hasil);
+  ```
+  
+  <br/>
+  Arrow function: <br/>
+  ```js
+    const data = (param1,param2) => {
+      let jumlah = param1 + param2;
+      return jumlah;
+    }
+    
+    let hasil = data(5,5);
+    console.log(hasil);
+  ```
+  
+  <br/>
+  Hal yang membedakan dari kedua jenis fungsi tersebut adalah sintaksnya. <br/>
+  
+  Catatan:<br/>
+  1) Pada normal function awal deklarasi menggunakan `function`, sedangkan arrow function menggunakan keywords `let`, `const`, dan `var`. <br/>
+  2) Di dalam `()` pada fungsi disebut parameter. <br/>
+  3) Di dalam `{}` pada fungsi merupakan function scope. <br/>
+  4) Di dalam fungsi terdapat `return` digunakan untuk mengembalikan sebuah nilai. <br/>
+  5) Variabel di dalam fungsi tidak dapat dipanggil di luar fungsi tersebut. <br/>
+  <br/>
+  
+  Selain ada fungsi yang dapat dibuat sendiri, juga terdapat fungsi yang dipanggil berdasarkan library yaitu built in function. <br/>
+  Contoh:<br/>
+  
+  ```js
+    int a = 10;
+    console.log(a.toString()); // digunakan untuk merubah angka menjadi sebuah string
+  ```
+  
+  <br/>
 
 - ### Penyelesaian error dan bug pada JavaScript Dasar - Scope and Function
+  Error merupakan sebuah program yang gagal untuk berjalan, sedangkan bug merupakan kesalahan yang terdapat pada sebuah sistem yang menyebabkan program         tidak berjalan secara normal. Lalu, untuk menyelesaikan error dapat menggunakan `try{....} catch(error){....}` dan untuk mengatasi sebuah bug dapat           dilakukan dengan metode debugging.<br/>
+      
+  Konsep penyelesain error dengan `try{....} catch(error){....}` : <br/>
+  
+  ```js
+    try{
+      penambahan(5,5);
+    } catch(error){
+      console.log(error.message);
+    }
+  ```
+      
+  <br/>
+  Pada program di atas akan menghasilkan sebuah error karena fungsi `penambahan()` belum dideklarasikan. <br/>
+  
+  Catatan: <br/>
+  1) Pernyataan `try{....}` digunakan untuk menjalankan sebuah program. <br/>
+  2) Pernyataan `catch(error){....}` digunakan untuk mencari tahu atau mendapatkan sebuah error jika hal tersebut terjadi. <br/><br/>
 
+  Properti yang digunakan pada saat menangani sebuah error dengan `try{....} catch(error){....}` : <br/>
+  1) `name` akan mengembalikan jenis error. <br/>
+  2) `message` akan mengembalikan pesan error. <br/>
+
+  Jenis-jenis nama pada error : <br/>
+  1) `EvalError` terjadi pada fungsi `eval()`. <br/>
+  2) `RangeError` terjadi karena angka yang melebihi jarak angka yang ditetapkan. <br/>
+  3) `ReferenceError` terjadi karena terdapat variabel yang belum dideklarasikan <br/>
+  4) `SyntaxError` terjadi karena sintaks salah. <br/>
+  5) `TypeError` terjadi karena sebuah nilai yang tidak sesuai dengan tipe nya. <br/>
+  6) `URIError` terjadi karena menggunakan karakter yang dilarang di dalam URI.
+
+  <br/><br/>
 
 ## JavaScript Dasar - DOM Manipulation
 
