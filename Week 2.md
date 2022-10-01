@@ -265,4 +265,90 @@
     let d = document.querySelectorAll("p.orang") // berdasarkan css selector (mendapatkan banyak element HTML)
   ```
   
+  <br/>
+  Cara merubah konten HTML: <br/>
+  
+  `<html>`
+  
+  <br/>
+  
+  ```html
+    <html>
+      <head>
+        <title>Website</title>
+      </head>
+      <body>
+        <div id="para1">Hai</div>
+      </body>
+    </html>
+  ```
+  
+  <br/>
+  
+  `<script>`
+  
+  ```js
+    document.getElementById("para1").innerHTML  = "<h1>teks baru</h1>"
+  ```
+  
+  <br/>
+  Catatan: merubah konten dengan `innerHTML` tidak hanya merubah teks, melainkan bisa saja merubah element HTML. <br/>
+  
+  Cara merubah nilai pada atribut HTML : <br/>
+  
+  `<html>`
+  
+  <br/>
+  
+  ```html
+    <html>
+      <head>
+        <title>Website</title>
+      </head>
+      <body>
+        <img src="pony1.png" id="img1"/>
+      </body>
+    </html>
+  ```
+  
+  <br/>
+  
+  `<script>`
+  
+  ```js
+    document.getElementById("img1").src  = "pony2.png"
+    
+    // struktur
+    // document.getElementById("img1").attribute   = nilai
+  ```
+  
+  <br/>
+  Cara menambah langsung element pada HTML dengan JavaScript : <br/>
+  
+  ```html
+    <html>
+      <head>
+        <title>Website</title>
+      </head>
+      <body>
+        <p>Hai</p>
+          <script>
+            document.write("Hafi Ihza Farhana")
+          </script>
+        <p>Selamat tinggal</p>
+      </body>
+    </html>
+  ```
+  
+  <br/>
+  Cara memanipulasi element HTML : <br/>
+  
+  ```md
+    a) document.createElement(e) // membuat element HTML
+    b) document.removeChild(e) // menghapus element HTML
+    c) document.appendChild(e) // menggabungkan element HTML
+    d) document.replaceChild(baru, tua // mengubah element HTML yang lam dengan yang baru
+  ```
+  
+  
   
