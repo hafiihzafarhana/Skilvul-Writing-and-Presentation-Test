@@ -182,7 +182,87 @@
   6) `URIError` terjadi karena menggunakan karakter yang dilarang di dalam URI.
 
   <br/><br/>
+  
+  Lalu, untuk mengatasi bug dapat dilakukan dengan debugging. Debugging dapat memberikan informasi kepada programmer lokasi program untuk berjalan dan berhenti. Di dalam JavaScript ada 2 cara yaitu: <br/>
+  
+  ```js
+    console.log("debug");
+    
+    atau
+    
+    debugger;
+  ```
+  
+  <br/>
+  Adanya hal itu, dapat mengetahui lokasi pemrograman dimulai dan berhenti.
+  
+  <br/><br/>
 
 ## JavaScript Dasar - DOM Manipulation
 
 - ### Memanipulasi HTML dan DOM
+  <div align="justify">DOM (Document Object Model) merupakan cara untuk memanipulasi style, konten, dan element pada website. Setelah website dimuat, maka akan ada DOM yang terbentuk menjadi sebuah pohon dan terdiri dari parent & child.</div> <br/>
+  
+  <img src="https://user-images.githubusercontent.com/71125093/193417882-ecb42f58-a910-4145-adec-ffc3f7a89734.png" width="400" />
+  <br/>
+  
+  DOM juga merupakan objek yang terdiri dari properties dan method. Lalu, cara untuk mendapatkan element HTML : <br/>
+  
+  ```md
+    a) document.getElementById(id) // mendapatkan element berdasarkan id. Akan mendapatkan 1 element spesifik
+    b) document.getElementsByTagName(name) // mendapatkan banyak element (collections) berdasarkan tag name
+    c) document.getElementsByClassName(name) // mendapatkan banyak element (collections) berdasarkan class name
+    d) document.querySelector(css selector) //mendapatkan satu element berdasarkan CSS selector
+    e) document.querySelectorAll(css selector) // mendapatkan banyak element (collections) berdasarkan CSS selector
+  ```
+  
+  <br/>
+  Praktek:
+  
+  `<html>`
+  
+  ```html
+    <html>
+      <head>
+        <title>Website</title>
+      </head>
+      <body>
+        <p id="para1">Hai</p> <!-- berdasarkan id -->
+        
+        <h1>Halo</h1> <!-- berdasarkan tag name -->
+        <h1>Keren</h1>
+        
+        <ul>
+          <li class="item">1</li> <!-- berdasarkan class nname -->
+          <li class="item">2</li>
+          <li class="item">3</li>
+          <li class="item">4</li>
+        </ul>
+        
+        <div class="box"></div> <!-- berdasarkan css selector -->
+        
+        <p class="orang">Hafi Ihza Farhana</p>
+        <p class="orang">Hafi Ihza</p>
+        <p class="orang">Hafi</p>
+        
+      </body>
+    </html>
+  ```
+  
+  <br/>
+  
+  `<script>`
+  
+  ```js
+    let a = document.getElementById("para1") // berdasarkan id
+    
+    let b = document.getElementsByTagName("h1") //berdasarkan tag name
+    
+    let c = document.getElementsByClassName("item") //berdasarkan class name
+    
+    let d = document.querySelector("div.box") // berdasarkan css selector (hanya mendapatkan 1 element HTML)
+    
+    let d = document.querySelectorAll("p.orang") // berdasarkan css selector (mendapatkan banyak element HTML)
+  ```
+  
+  
