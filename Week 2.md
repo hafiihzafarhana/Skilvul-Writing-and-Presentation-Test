@@ -214,6 +214,9 @@
     c) document.getElementsByClassName(name) // mendapatkan banyak element (collections) berdasarkan class name
     d) document.querySelector(css selector) //mendapatkan satu element berdasarkan CSS selector
     e) document.querySelectorAll(css selector) // mendapatkan banyak element (collections) berdasarkan CSS selector
+    f) parentElement // digunakan untuk menyeleksi parent dari suatu elemen 
+    g) nextElementSibling // digunakan untuk menyeleksi elemen setelahnya dalam 1 parent
+    h) previousElementSibling // digunakan untuk menyeleksi elemen sebelumnya dalam 1 parent
   ```
   
   <br/>
@@ -349,6 +352,60 @@
     c) document.appendChild(e) // menggabungkan element HTML
     d) document.replaceChild(baru, tua // mengubah element HTML yang lam dengan yang baru
   ```
+  
+  Praktek Kasus:
+  <br/>
+  
+  `<html>`
+  
+  ```html
+           <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+      </head>
+      <body>
+          <div class="kontainer">
+              <form action="">
+                  <input type="text" id="nama" placeholder="isi nama">
+                  <button type="submit" id="add">Tambah</button>
+              </form>
+              <ul class="todo" id="todo">
+                  <li>Item</li>
+              </ul>
+          </div>
+          <script src="script.js"></script>
+      </body>
+      </html>
+  ```
+  
+  ```js
+    let tambahButton = document.getElementById("add")
+      let inputNama = document.getElementById("nama")
+
+      tambahButton.addEventListener("click", (e) => {
+          e.preventDefault()
+          let valueInputNama = inputNama.value
+          if(valueInputNama){
+              tambahData(valueInputNama)
+          }
+      })
+
+      let tambahData = (data) => {
+          let list = document.getElementById("todo")
+          // create li
+          let item = document.createElement('li')
+          item.innerText = data
+          console.log(list.childNodes)
+          list.insertBefore(item, list.childNodes[0])
+      }
+  ```
+  
+  <br/>
+  Pada contoh kasus di atas merupakan langkah untuk melakukan set data denga JavaScript.
   
   
   
