@@ -407,5 +407,42 @@
   <br/>
   Pada contoh kasus di atas merupakan langkah untuk melakukan set data denga JavaScript.
   
+ <br/>
+ 
+ Hasil:<br/>
+ 
+ ![Screenshot (180)](https://user-images.githubusercontent.com/71125093/193437664-091b79e9-dd5a-4e7f-b4d9-84e114fd1d03.png)
+
+
+  Memanipulasi Atribut : <br/>
   
+  ```md
+  1) setAttribute //untuk menetapkan atribut dengan nilai tertentu
+  2) getAttribute //untuk mendapatkan nilai sebuah atribut
+  3) removeAttribute //untuk menghapus atribut
+  4) hasAttribute // memeriksa element tersebut memilik atribut atau tidak
+  ```
+  
+  <br/>
+  Memanipulasi element styling : <br/>
+  
+  ```md
+  1) style.property // untuk mengatur element styling tertentu
+  2) getComputedStyle // untuk mendapatkan style
+  ```
+  
+  <br/>
+  Events merupakan sebuah kejadian yang dilakukan berdasarkan interaksi pengguna pada webiste. Ada beberapa event, dan ini merupakan yang populer : <br/>
+  
+  ```md
+  1) onchange // Terpicu ketika element dirubah
+  2) onclick // Terpic ketika element di klik
+  3) ondblclick // Terpicu ketika element di double click
+  4) ondrag // Terpicu ketika element di seret
+  5) onkeyup // Terpicu ketika key-up ditekan
+  6) onload // Terpicu ketika website di load
+  ```
+  
+  <br/>
+  Dan masih banyak lagi
   
