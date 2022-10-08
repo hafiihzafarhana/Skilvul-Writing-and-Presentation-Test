@@ -163,6 +163,31 @@
    <br/><br/>
 
 ## 4 Program Rekursif
+   <div align="justify">Merupakan sebuah fungsi yang memanggil dirinya sendiri sampai kondisi tertentu. Apabila tidak ada kondisi yang menghentinkanya, maka akan terjadi looping forever yang menyebabkan stack overflow (memory yang dipakai melampaui batas). </div> <br/>
+   
+   Ketentuan dari rekursif: <br/>
+   1) Harus memiliki kondisi untuk menyatakan berhenti.<br/>
+   2) Memanggil dirinya sendiri dengan cara dikurangi. <br/>
+
+   Contoh rekursif: <br/>
+   
+   ```js
+      function faktorial(n){
+        if(n == 1){
+          return 1;
+        } else{
+          return n * faktorial(n-1)
+        }
+      }
+
+      console.log(faktorial(5));
+   ```
+   
+   <br/>
+   Fungsi di atas merupakan fungsi rekursif untuk menjadi nilai faktorial. 
+   
+   <br/><br/>
+
 ## 5 Memanipulasi Data Menggunakan Web Storage
 ## 6 Asynchronous Pada JavaScript
 ## 7 Mengambil Data API Menggunakan Fetch
