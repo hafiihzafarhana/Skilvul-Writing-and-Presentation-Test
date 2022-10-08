@@ -76,7 +76,92 @@
    <br/> <br/>
   
 ## 2 Struktur Data Object
+   <div align="justify">Object merupakan tipe data yang terdiri dari method (function) dan property (variabel). Sama dengan Array, Object dapat menampung banyak data dengan tipe data yang berbeda. </div> <br/>
+
+   Strukur dari Object dan cara aksesnya: <br/>
+   
+   ```js
+      let data = {
+         id:1,
+         nama:"Hafi Ihza Farhana",
+         menikah:false,
+         sayHai:() => {
+            console.log("Hai")
+         }
+      }
+      
+      console.log(data.nama); //mendapatkan data nama dengan dot natation
+      console.log(data.sayHai()); //mendapatkan method sayHai dengan pesan "Hai"
+      
+      data.nama="Karl Marx"; //mengganti property nama dari "Hafi Ihza Farhana" ke "Karl Marx"
+      
+      data.umur = 20; //menambah property umur yang bernilai 20
+      
+      delete data.umur; //menghapus property umur
+   ```
+   
+   <br/>
+   Apabila Array disimpan di dalam kurung siku `[]`, maka Object disimpan di dalam kurung kurawal `{}`. Selain itu, Object dapat diakses dengan 2 cara yaitu dot notation `.` dan bracket notation `[]`. <br/>
+   
+   Juga terdapat nested object atau object di dalam object : <br/>
+   
+   ```js
+      let data = {
+         id:1,
+         nama:"Hafi Ihza Farhana",
+         menikah:false,
+         sayHai:() => {
+            console.log("Hai")
+         },
+         detail:{
+            pendidikan:"S1",
+            jurusan:"Informatika"
+         }
+      }
+      
+      //Cara akses
+      console.log(data.detail.pendidikan)
+   ```
+   
+   <br/><br/>
+   
 ## 3 Struktur Data Array of Object
+   <div align="justify">Merupakan Object atau sekumpulan Object yang ada di dalam Array. Array of object biasanya di dapatkan saat mengerjakan sebuah proyek dengan menggunakan JSON.</div> <br/>
+   
+   cara akses Array of Object:
+   
+   ```js
+      let data = [
+         {
+            id:1,
+            nama:"Hafi"
+         },
+         {
+            id:2,
+            nama:"Ihza"
+         },
+         {
+            id:3,
+            nama:"Farhana"
+         }
+      ]
+      
+      //cara akses manual
+      console.log(data[0].nama) //mendapatkan index Array ke 0 dengan key nama akan menghasilkan "hafi"
+      
+      //cara akses dengan looping
+      data.map((e) => {
+         return e.id +" "+ e.nama;
+      })
+      
+      //cara akses looping tidak hanya dengan menggunakan map, bisa menggunakan perulangan for, forEach, dll
+   ```
+   
+   <br/>
+   Perbedaan dari Array sebelumnya, Array sebelumnya menyimpan data primiif tanpa objek, sedangkan Array of Object akan menyimpan data di dalam Object.
+   
+   <br/><br/>
+
 ## 4 Program Rekursif
 ## 5 Memanipulasi Data Menggunakan Web Storage
 ## 6 Asynchronous Pada JavaScript
