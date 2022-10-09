@@ -235,12 +235,12 @@
    b) promises <br/>
    Promises digunakan untuk melakukan http request/fetch data API. Promises tidak berbentuk nested, melainkan chaning. Hal itu dapat mempermudah proses eksekusi code. Ada 3 kondisi di dalam promises yaitu pending (dalam proses), fulfilled (terpenuhi), dan rejected (ditolak). <br/>
    
-    ```js
-        promise.then(
-           script => alert(`berhasil`),
-           error => alert(`error`)
-         );
-    ```
+   ```js
+   promise.then(
+     script => alert(`berhasil`),
+     error => alert(`error`)
+    );
+   ```
       
    <br/>
    
