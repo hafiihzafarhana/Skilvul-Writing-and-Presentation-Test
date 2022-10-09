@@ -259,5 +259,17 @@
    <br/><br/>
    
 ## 7 Mengambil Data API Menggunakan Fetch
+   Fetch API merupakan langkah untuk mengambil sebuah data dengan menggunakan Fetch(). <br/>
+   
+   Cara: <br/>
+   
+   ```js
+      const api_url = 
+      "https://reqres.in/api/users";
+  
+      fetch(api_url)
+        .then(e => e.json())
+        .then(e => console.log(e))
+   ```
 
 
