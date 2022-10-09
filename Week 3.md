@@ -218,7 +218,7 @@
       Merupakan sebuah fungsi yang diletakan di dalam argumen atau parameter. Dan fungsi itu akan dikerjakan setelah fungsi utama dikerjakan. <br/>
       
     ```js
-         function tampil(param){
+      function tampil(param){
             document.getElementById("demo").innerHTML = param;
          }
          
