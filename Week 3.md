@@ -217,7 +217,7 @@
    a) callback <br/>
       Merupakan sebuah fungsi yang diletakan di dalam argumen atau parameter. Dan fungsi itu akan dikerjakan setelah fungsi utama dikerjakan. <br/>
       
-    ```js
+   ```js
       function tampil(param){
             document.getElementById("demo").innerHTML = param;
          }
@@ -227,8 +227,8 @@
             callback(hasil);
          }
          
-         tambah(5, 5, tampil);
-    ```
+         tambah(5, 5, tampil);   
+   ```
    
    <br/>
       
