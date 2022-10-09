@@ -189,7 +189,75 @@
    <br/><br/>
 
 ## 5 Memanipulasi Data Menggunakan Web Storage
+   <div align="justify">Merupakan penyimpanan data di dalam penyimpanan sebuah website. JavaScript dapat menyimpan dan mengakses data yang ada di dalam Web Storage tanpa batasan waktu. Data yang ada di dalam Web Storage akan selalu ada, meskipun browser ditutuip. Juga, Web Storage memiliki penyimpanan yang besar.</div> <br/>
+   
+   Hal penting saat menggunakan Web Storage : <br/>
+   a) Web Storage tidak aman dan tidak boleh digunakan untuk menyimpanan data pribadi. <br/>
+   b) Dapat menyimpanan 5 mb data di loca storage. <br/>
+   c) Local storage sebaiknya menyimpan informasi yang tidak sensitif terhadap database. <br/>
+   d) Local storage berfifat synchronus. <br/>
+   
+   <br/>
+   
+   Beberapa method local storage: <br/>
+   
+   ```js
+      localStorage.setItem("kota", "Surabya"); //digunakan untuk menyimpan data
+      localStorage.getItem("kota"); //digunakan untuk mendapatkan data
+      localStorage.removeItem("city"); //digunakan untuk menghapus data
+      localStorage.clear(); //digunakan untuk mengahpus seluruh data
+   ```
+   
+   <br/><br/>
+   
 ## 6 Asynchronous Pada JavaScript
+   <div align="justify">JavaScript merupakan bahasa pemrograman single thread yang hanya dapat mengakses satu tugas saja pada satu waktu yang disebut synchronus, maka hal itu sangatlah tidak efektif. Maka, muncul lah asynchronus JavaScript yang berjalan sebuah tugas tanpa harus menunggu tugas yang lain selesai terlebih dahulu.</div> <br/>
+   
+   Asynchronus tidak lepas dengan 3 hal yaitu : <br/>
+   a) callback <br/>
+      Merupakan sebuah fungsi yang diletakan di dalam argumen atau parameter. Dan fungsi itu akan dikerjakan setelah fungsi utama dikerjakan. <br/>
+      
+      ```js
+         function tampil(param){
+            document.getElementById("demo").innerHTML = param;
+         }
+         
+         function tambah(a,b,callback){
+            let hasil = a + b;
+            callback(hasil);
+         }
+         
+         tambah(5, 5, tampil);
+      ```
+   
+   <br/>
+      
+   b) promises <br/>
+   Promises digunakan untuk melakukan http request/fetch data API. Promises tidak berbentuk nested, melainkan chaning. Hal itu dapat mempermudah proses eksekusi code. Ada 3 kondisi di dalam promises yaitu pending (dalam proses), fulfilled (terpenuhi), dan rejected (ditolak). <br/>
+   
+     ```js
+        promise.then(
+           script => alert(`berhasil`),
+           error => alert(`error`)
+         );
+      ```
+      
+   <br/>
+   
+  c) Async/Await <br/>
+   Digunakan untuk menangani hasil dari sebuah promises. Sedangkan await digunakan untuk menunda sebuah kode yang dijalankan sampai proses asynchronus selesai. <br/>
+   
+   ```js
+      async function data() {
+        let result = await new tambah(1,1);
+        alert(result);
+      }
+
+      data();
+   ```
+   
+   <br/><br/>
+   
 ## 7 Mengambil Data API Menggunakan Fetch
 
 
