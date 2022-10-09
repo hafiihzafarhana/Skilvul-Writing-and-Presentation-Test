@@ -1,4 +1,4 @@
-# Writing and Presentation Test Week 1
+# Writing and Presentation Test Week 3
 ## 1 Struktur Data Array
    <div align="justify">Array merupakan sekumpulan penyimpanan atau memory untuk sebuah data yang memiliki tipe data yang sama atau berbeda (Ada beberapa bahasa pemrograman yang bisa menampung Array dengan tipe data yang berbeda). Array terbagi menjadi kumpulan-kumpulan index. Hal tersebut merupakan cara untuk mengakses sebuah data di dalam Array. Nilai awal dari Array adalah 0. </div> <br/>
    
