@@ -92,6 +92,79 @@
     <br/>
     <div align="justify">Dengan metikan hal tersebut, dapat melihat branch, date, author, id commit, pesan commit, dan hal apa saja yang dirubah di dalam file yang telah dirubah dari commit sebelumnya.</div>
     <br/>
+    
+- ### Melakukan merge pada Git
+     Merge digunakan untuk menggabungkan branch cabang ke branch utama untuk digabungkan menjadi proyek yang siap produksi. <br/>
+      
+     Langkah:
+     1) Buat sebuah repository di dalam lokal <br/>
+      
+       git init
+      
+     <br/>
+     
+     2) Lakukan proses ke staging area <br/>
+     
+       
+       git add .
+       
+     
+     <br/>
+     
+     3) Lakukan commit dengan branch apapun (Contoh kali ini adalah main) <br/>
+
+       git commit -m "awal"
+      
+     <br/>
+      
+     4) Buat branch baru (Contoh kali ini adalah fiturA) <br/>
+
+       git branch fiturA
+      
+     <br/>
+     
+     5) Pindah dari branch main ke Branch fiturA <br/>
+
+       git checkout fiturA
+      
+     <br/>
+      
+     6) Lakukan proses stagged sampai commit dengan branch fiturA <br/>
+
+     7) Setelah selesai, pindah branch fiturA ke branch main <br/>
+
+     8) Lakukan merge dari untuk memasukan branch fiturA ke main <br/>
+        
+       git merge fiturA
+     
+     <br/>
+     
+- ### Langkah menghindari konflik saat berkolaborasi 
+     <div align="justify">Menghindari konflik saat berkolaborasi dapat dilakukan dengan berkomunikasi antar anggota yang berkolaborasi mengenai pembagian tugas mana saja yang harus dikerjakan. Dikarenakan apabila anggota mengerjakan file dengan baris yang sama akan menyebabkan sebuah konflik.</div> <br/>
+     
+     Langkah untuk menyelesaikan konflik: <br/>
+     1) Periksa baris kode dan file yang sedang terjadi konflik <br/>
+     2) Segera lakukan konfirmasi kepada para anggota yang berkolaborasi <br/>
+     3) Anggota yang mengalami konflik harus melakukan pull <br/>
+
+        ```md
+          git pull
+        ```
+        
+        <br/>
+        
+     4) Lakukan merge untuk melihat konfliknya <br/>
+
+         ```md
+          git merge (branch yang dituju)
+         ```
+         
+         <br/>
+         
+     5) Lakukan diskusi dengan kelompok untuk menentukan code mana yang akan dipakai <br/>
+
+     6) Lalu lakukan proses stagged sampai commit, dan push file ke repository <br/> 
+     
 
 ## 2 Responsive Web Design
 
