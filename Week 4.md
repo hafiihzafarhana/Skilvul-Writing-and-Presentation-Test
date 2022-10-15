@@ -239,7 +239,20 @@
 
 ## 2 Responsive Web Design
 - ### Responsive web design
+     Responsive web design merupakan desain website yang dapat diakses di device manapun seperti mobile, desktop, dan tablet. Jadi, design di dalam website akan memposisikan dirinya sesuai dengan device yang dipakai. <br/>
+      
+     Contoh : <br/>
+     <img src="https://www.pngitem.com/pimgs/m/140-1404926_et-web-design-free-responsive-joomla-template-responsive.png" width="400" /><br/>
+     <i>Sumber : https://contohgambartemplate.blogspot.com/2019/11/template-website-layout-design.html</i> <br/> <br/>
+     
+     Pada contoh gambar di atas merupakan sebuah website yang responsive terhadap device yang akan dipakai <br/>
+      
 - ### Tools untuk website responsive
+     Tools yang digunakan untuk membantu membuat website responsive adalah web browser masing-masing. Lalu, kita dapat mendeteksi website responsive atau tidak dengan melakukan inspect halaman. <br/>
+      
+     Shortcut : <br/>
+     
+      
 - ### Menggunakan viewport
 - ### Menggunakan relative CSS unit
 - ### Menggunakan media query
