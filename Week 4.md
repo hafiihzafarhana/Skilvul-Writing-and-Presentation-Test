@@ -252,6 +252,22 @@
       
      Shortcut : <br/>
      
+     ```md
+        ctrl + shift + j
+     ```
+     
+     <br/>
+     Lalu, klik icon mobile <br/>
+     
+     atau <br/>
+     
+     Bisa menggunakan shortcut : <br/>
+     
+     ```md
+        ctrl + shift + m
+     ```
+     
+     <br/>
       
 - ### Menggunakan viewport
 - ### Menggunakan relative CSS unit
