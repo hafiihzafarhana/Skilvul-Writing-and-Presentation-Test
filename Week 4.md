@@ -164,6 +164,77 @@
      5) Lakukan diskusi dengan kelompok untuk menentukan code mana yang akan dipakai <br/>
 
      6) Lalu lakukan proses stagged sampai commit, dan push file ke repository <br/> 
+
+ - ### Publikasi file atau aplikasi ke dalam GitHub
+   <div align="justify">Setelah seluruh langkah di atas berhasil, maka dapat publikasi file atau aplikasi ke dala GitHub dengan cara :</div>
+   <br/>
+   
+   ```md
+       git push -u origin main
+   ```
+   
+   Studi kasus :
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192151539-db6c3019-85da-4763-be6f-e404e91ec80f.png" width="400"/>
+   <br/>
+   <div align="justify">Gambar di atas adalah kondisi file telah dipublikasi ke dalam GitHub.</div>
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192152261-d3a047f2-6ad8-4d88-8f7c-9ceeff52d4fe.png" width="400"/>
+   <br/>
+   <div align="justify">Gambar di atas adalah GitHub repository yang telah terisi.</div>
+   <br/>
+   
+ - ### Cloning GitHub ke penyimpanan lokal
+   <div align="justify">Cloning merupakan proses menyimpan GitHub repository ke dalam lokal repository yang kita miliki. Sebelumnya akan digunakan GitHub        Repository dengan link dibawah sebagai studi kasus.
+   </div>
+   <br/>
+   
+   ```md
+       https://github.com/hafiihzafarhana/Wegodev-competition-with-bootstrap-4.5
+   ```
+   
+   <br/>
+   Hal yang harus diketikan untuk cloning :
+   <br/>
+   
+   ```md
+       git clone "link GitHub repository"
+   ```
+   
+   <br/>
+   Studi kasus :
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192152833-5c570708-df37-497d-b655-58aa7ac6a7de.png" width="400"/>
+   <br/>
+   <div align="justify">Gambar di atas merupakan proses cloning dari GitHub repository dengan link yang dicantumkan di atas.
+   </div>
+   <br/>
+   <img src="https://user-images.githubusercontent.com/71125093/192152926-ac3ecb52-e4f3-49f8-b5f3-d4b104f536e9.png" width="400"/>
+   <br/>
+   <div align="justify">Gambar di atas merupakan hasil dari proses cloning dengan link yang dicantumkan di atas.
+   </div>
+   
+   <br/>
+   
+- ### Cara melakukan kolaborasi dengan GitHub kolaborasi
+     a) Cari buttom "plus" / "+" <br/>
+     b) Lalu pilih "new organization" <br/>
+     c) Pilih "Create a free organization" <br/>
+     d) Isi data sampai selesai <br/>
+     e) Pilih "Create new repository" <br/>
+     f) Sebagai seorang leader, lakukan push file pertama ke dalam repository yang telah dibikin dengan branch utama yaitu `main` atau `master` <br/>
+     g) Masukan branch `dev` untuk fase pengembangan <br/>
+     h) Invite anggota yang akan diajak untuk berkolaborasi <br/>
+     i) Setiap anggota melakukan cloning terhadap repository yang ada <br/>
+     j) Saat melakukan push ke dalam GitHub, maka anggota harus menggunakan branch berdasarkan fitur yang dibuat, bukan `dev`, `main`, dan `master` <br/>
+     k) Anggota akan membuat pull request <br/>
+     l) Leader akan menerima pull request <br/>
+     m) Leader akan melakukan merge ke branch `dev` sebagai branch untuk proses pengembangan <br/>
+     n) Setelah proses pengembangan selesai, branch `dev` akan di merge ke dalam branch `main` <br/>
+     o) Setiap branch yang telah dibuat dapat dihapus <br/>
+      
+     <br/>
+      
      
 
 ## 2 Responsive Web Design
