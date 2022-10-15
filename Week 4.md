@@ -238,5 +238,17 @@
      
 
 ## 2 Responsive Web Design
+- ### Responsive web design
+- ### Tools untuk website responsive
+- ### Menggunakan viewport
+- ### Menggunakan relative CSS unit
+- ### Menggunakan media query
+- ### Menggunakan flexbox dan Grid
+    
 
 ## 3 Bootstrap
+- ### Kapan menggunakan Bootstrap?
+- ### Menggunakan layout pada Bootstrap
+- ### Menggunakan content pada Bootstrap
+- ### Menggunakan component pada Bootstrap
+- ### Membuat website responsif menggunakan Bootstrap
