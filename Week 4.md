@@ -270,9 +270,270 @@
      <br/>
       
 - ### Menggunakan viewport
+      Viewport digunakan untuk mengontrol dimensi halaman di dalam setiap device. <br/>
+      Aturan : <br/>
+      1) width=device-width, untuk mengatur lebar halaman website berdasarkan lebar layar device. <br/>
+      2) initial-scale=1.0, untuk mengatur level perbesaran ketika halaman dimuat. <br/>
+
+      ```html
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      ```
+      
+     <br/><br/>
+      
 - ### Menggunakan relative CSS unit
+     Digunakan untuk menentukan panjang relatif terhadap properti panjang lainya. Ukuranya akan tetap. <br/>
+      
+     Jenis relative CSS unit: <br/>
+     1) `em`, akan relatif terhadap ukuran huruf <br/>
+
+
+     ```css
+        p {
+          font-size: 16px;
+          line-height: 2em; // akan berukuran 16px * 2 = 32px
+        }
+     ```
+        
+     <br/>
+     
+    2) `ex`, akan relatif terhadap tinggi <br/>
+
+
+      ```css
+          // kondisi apabila span berada di dalam div
+          div {
+            font-size: 60px;
+          }
+
+          span {
+            font-size: 1ex; // akan menyesuaikan dengan ukuran panjang huruf yang ada di dalam div
+          }
+       ```
+
+    <br/>
+        
+     3) `ch`, akan relatif lebar berukuran 0 <br/>
+
+        
+        ```css
+          body {
+            font-size:8px;
+          }
+
+          div {
+            font-size: 3ch; // akan berukuran 12 px
+          }
+        ```
+        
+        <br/>
+        
+     4) `rem`, akan relatif terhadap element root-nya <br/>
+
+        
+        ```css
+          html {
+            font-size:8px;
+          }
+
+          div {
+            font-size: 3rem; // akan berukuran 24 px
+          }
+        ```
+        
+        <br/>
+        
+     5) `vw`, akan relatif sebesar 1% lebar viewport <br/>
+
+        
+        ```css
+          //seandainya lebar viewport adalah 500
+          div {
+            font-size: 20vw; // 500 * 20 * 1% = 100 px;
+          }
+        ```
+        
+        <br/>
+        
+     
+     6) `vh`, akan relatif sebesar 1% tinggi viewport <br/>
+
+        
+        ```css
+          //seandainya lebar viewport adalah 500
+          div {
+            font-size: 20vh; // 500 * 20 * 1% = 100 px;
+          }
+        ```
+        
+        <br/>
+        
+        
+     7) `vmin`, akan relatif sebesar 1% dari tinggi dan lebar viewport terkecil <br/>
+  
+        
+        ```css
+          // seandainya lebar adalah 500 dan tinggi adalah 700
+          div {
+            font-size: 15vmin; // Akan berukuran 50px
+          }
+        ```
+        
+        <br/>
+        
+        
+     7) `vmax`, akan relatif sebesar 1% dari tinggi dan lebar viewport terbesar <br/>
+  
+        
+        ```css
+          // seandainya lebar adalah 500 dan tinggi adalah 700
+          div {
+            font-size: 15vmax; // Akan berukuran 72px
+          }
+        ```
+        
+        <br/>
+        
+        
+     8) `%`, akan relatif terhadap parent-nya <br/>
+  
+        
+        ```css
+          body{
+            font-size:10px;  
+          }
+          
+          div {
+            font-size: 100%; // Akan berukuran 10px
+          }
+        ```
+        
+        <br/><br/>
+        
 - ### Menggunakan media query
+     Media query digunakan untuk mengatur styling terhadap element HTML sesuai dengan device yang dipakai. <br/>
+     Media query dapat digunakan untuk memeriksa :<br/>
+     a) Tinggi dan lebar viewport <br/>
+     b) Tinggi dan lebar device <br/>
+     c) Resolusi <br/>
+     d) Orientasi (landscape atau potrait) <br/>
+     
+     Namun, pada umumnya yang sering digunakan adalah melihat lebar dan tinggi device (screen). <br/>
+     
+     ```css
+        @media only screen and (max-width: 600px) {
+          body {
+            background-color: red; //element body apabila memiliki lebar kurang dari 600px, maka warna akan berubah menjadi merah
+          }
+        }
+     ```
+     
+     <br/><br/>
+
 - ### Menggunakan flexbox dan Grid
+   - #### Flexbox
+    Flexbox merupakan langkah untuk mengatur layout. Flexbox memiliki kemampuan untuk menyesuaikan layout secara otomatis. Flexbox memiliki <i>parent</i> dan     banyak <i>child</i>.
+    <br/>
+    <img src="https://user-images.githubusercontent.com/71125093/192174973-f40f486a-3f21-4f40-9add-8f947596dfb2.png" alt="OIP-1" width="300" />
+    
+    <br/>
+    
+    - #### Ordering dan orientation:
+    
+         a) `flex-direction` digunakan untuk mengatur letak child item. Ada 4 jenis <i>value</i>:
+       
+             row untuk membentuk sebuah baris dari kiri ke kanan.
+
+             row-reverse untuk membentuk baris dari kanan ke kiri.
+
+             column untuk membentuk baris dari atas ke bawah.
+
+             column-reverse untuk membentuk baris dari bawah ke atas.
+
+         <img src="https://user-images.githubusercontent.com/71125093/192175866-4bd37129-2e0c-44e7-9e7a-da6a4af3908e.png" alt="OIP-1" width="300" />
+          <br/>
+       
+         b) `flex-wrap` digunakan untuk membuat tatal letak item <i>children</i> dalam satu tata letak saja. Ada 3 jenis <i>value</i>:
+
+             no-wrap artinya tidak menggunakan flex-wrap.
+
+             wrap artinya memiliki beberapa line dari atas ke bawah  jika space dalam 1 line sudah full width.
+
+             wrap-reverse artinya memiliki beberapa line dari bawah ke atas  jika space dalam 1 line sudah full width.
+
+      
+         c) `flex-flow` merupakan gabungan dari `flex-wrap` dan `flex-direction`. <br/>
+      
+         d) `order` digunakan untuk memposisikan <i>item</i> yang akan diatur berdasarkan urutan order. Apabila semakin kecil, maka akan diposisikan paling           awal. Namun, apabila `order` bernilai 0 tidak akan berubah karena merupakan <i>default value</i>. <br/>
+      
+     - #### Alignment:
+   
+         a) `justify-content` digunakan untuk mengatur tata letak dan jarak antar <i>item child</i> secara horizontal dan vertikal. Ada 6 jenis:
+
+             flex-start untuk memposisikan item di awal kontainer.
+
+             flex-end untuk memposisikan item di akhir kontainer.
+
+             center untuk memposisikan item di tengah kontainer.
+
+             space-between untuk memposisikan antar ruang di setiap item.
+
+             space-around memiliki jarak sebelum, setelah, dan setelah di tiap item.
+
+             space-evenly memiliki posisi yang sama dengan `space-around` .
+             
+
+          <br/>
+          
+     
+         b) `align-self` digunakan untuk mengatur <i>align</i>. Ada 5 jenis:
+
+             flex-start untuk memposisikan item di awal kontainer.
+
+             flex-end untuk memposisikan item di akhir kontainer.
+
+             center untuk memposisikan item di tengah kontainer.
+
+             baseline memiliki kesamaan dengan flex-start .
+
+             stretch untuk memposisikan item dengan full kontainer.
+             
+
+          <br/>
+          
+        
+         c) `align-content` memiliki kesamaan dengan `justify-content` . Hanya saja yang membedakan pada `align-content` terdapat <i>value</i> `stretch` .
+         
+         d) `align-items` digunakan untuk mengatur <i>align</i> dari item child secara vertikal. Ada 5 jenis:
+         
+             flex-start untuk memposisikan item di awal kontainer.
+
+             flex-end untuk memposisikan item di akhir kontainer.
+
+             center untuk memposisikan item di tengah kontainer.
+
+             baseline memiliki kesamaan dengan flex-start .
+
+             stretch untuk memposisikan item dengan full kontainer.
+             
+          <br/>
+     
+     - #### Flexibility:
+         a) `flex-grow` digunakan untuk mengatur ukuran suatu <i>item child</id> pada flexbox. Nilai harus angka dan tidak boleh minus.
+         
+         b) `flex-shrink` digunakan untuk membuat ukuran suatu <i>item child</i> mengecil secara relatif terhadap <i>item child</i> lainya. Nilai harus angka          dan tidak boleh minus. Semakin besar nilainya, maka semakin kecil ukuran dari suatu <i>item child</i>.
+         
+         c) `flex-basis` digunakan untuk menentukan lebar dari <i>item child</i>. Flexbox tidak bisa menggunakan properti `min-width` dan `max-width`. Ada 4          nilai dari `flex basis` :
+         
+            auto akan menyesuaikan dengan kontenya
+            
+            angka (bisa menggunakan satuan)
+            
+            initial adalah bentuk default
+            
+            inherit akan diturunkan dari <i>parent</i>
+            
+          <br/>
     
 
 ## 3 Bootstrap
