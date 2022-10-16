@@ -535,7 +535,127 @@
             
           <br/>
     
-
+ - #### Grid
+   Grid merupakan sistem tata letak untuk element HTML dengan menggunakan baris dan kolom. Kolom dari setiap baris akan berjumlah 12.<br/>
+       
+   <img src="https://1.bp.blogspot.com/-U3rHRyiwlSA/XjonukZGY3I/AAAAAAAAJ_U/-K_pNt8tpIoXKLI_zoYhApo_GdmE0T4mwCLcBGAsYHQ/s1600/css-grid-module.png" width="400"/> <br/><br/>
+   <i><a href="https://www.anythinglearn.com/2020/02/what-is-grid-layout-in-css.html">Sumber gambar</a></i> <br/>
+   
+   Properti pada Grid: <br/>
+   1) `display` <br/>
+      
+      ```css
+        .grid-container1{
+            display:inline-grid; //untuk membuat display grid dengan level block
+         }
+         
+        .grid-container2{
+            display:inline-grid; //untuk membuat display grid dengan level inline
+         }
+      ```
+      
+      <br/>
+   
+   2) `gap`, digunakan untuk memberi spasi tiap baris dan kolom antar item <br/>
+      
+      ```css
+        .grid-container1{
+            gap:10px; //akan memberikan jarak spasi baris dan kolom tiap item sebesar 10px
+         }
+      ```
+      
+      <br/>
+      
+   3) `column-gap`, digunakan untuk memberi spasi kolom antar item <br/>
+      
+      ```css
+        .grid-container1{
+            column-gap:10px; //akan memberikan jarak spasi kolom tiap item sebesar 10px
+         }
+      ```
+      
+      <br/>
+      
+   4) `row-gap`, digunakan untuk memberi spasi baris antar item <br/>
+      
+      ```css
+        .grid-container1{
+            row-gap:10px; //akan memberikan jarak spasi baris tiap item sebesar 10px
+         }
+      ```
+      
+      <br/>
+      
+   5) `grid-column-start` dan `grid-column-end` <br/>
+      
+      ```css
+        .item1{
+            grid-column-start:1;
+            grid-column-end:3;
+         }
+         
+         // item1 akan selebar 2 kolom
+      ```
+      
+      <br/>
+      
+   6) `grid-row-start` dan `grid-row-end` <br/>
+      
+      ```css
+        .item1{
+            grid-row-start:1;
+            grid-row-end:3;
+         }
+         
+         // item1 akan selebar 2 baris
+      ```
+      
+      <br/>
+      
+   7) `grid-template-column`, digunakan untuk memberikan ukuran ruang untuk tiap kolom  <br/>
+      
+      ```css
+        .container1{
+            grid-template-column:auto auto auto //setiap baris akan memiliki 3 kolom auto
+         }
+         
+      ```
+      
+      <br/>
+      
+   8) `grid-template-rows`, digunakan untuk memberikan ukuran ruang untuk tiap baris  <br/>
+      
+      ```css
+        .container1{
+            grid-template-column:80px 200px // baris pertama memiliki lebar dan tinggi 80px, sedangkan barus ke dua memiliki lebar dan tinggi 200px
+         }
+         
+      ```
+      
+      <br/>
+      
+  9) `grid-column`, merupakan shortcut dari `grid-column-start` dan `grid-column-end`  <br/>
+      
+      ```css
+        .item{
+            grid-column:1 / 5; // akan memberikan jarak sampai 5 kolom
+         }
+         
+      ```
+      
+      <br/>
+      
+  10) `grid-rows`, merupakan shortcut dari `grid-rows-start` dan `grid-rows-end`  <br/>
+      
+      ```css
+        .item{
+            grid-row:1 / 5; // akan memberikan jarak sampai 5 baris
+         }
+         
+      ```
+      
+      <br/>
+      
 ## 3 Bootstrap
 - ### Kapan menggunakan Bootstrap?
 - ### Menggunakan layout pada Bootstrap
