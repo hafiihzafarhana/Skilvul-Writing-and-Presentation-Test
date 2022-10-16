@@ -654,10 +654,12 @@
          
       ```
       
-      <br/>
+      <br/><br/>
       
 ## 3 Bootstrap
-- ### Kapan menggunakan Bootstrap?
+- ### Alasan dan kapan menggunakan Bootstrap?
+     Alasan menggunakan Bootstrap untuk mempermudah pekerjaan dalam membuat elemen secara instan. Bootstrap harus digunakan apabila telah memahami prinsip responsive web design, flexbox, dan grid. Dikarenakan kunci utama dari menggunakan Bootstarp adalah 3 poin tersebut. <br/>
+     
 - ### Menggunakan layout pada Bootstrap
 - ### Menggunakan content pada Bootstrap
 - ### Menggunakan component pada Bootstrap
