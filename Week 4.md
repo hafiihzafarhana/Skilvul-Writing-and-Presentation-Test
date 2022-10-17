@@ -660,7 +660,456 @@
 - ### Alasan dan kapan menggunakan Bootstrap?
      Alasan menggunakan Bootstrap untuk mempermudah pekerjaan dalam membuat elemen secara instan. Bootstrap harus digunakan apabila telah memahami prinsip responsive web design, flexbox, dan grid. Dikarenakan kunci utama dari menggunakan Bootstarp adalah 3 poin tersebut. <br/>
      
-- ### Menggunakan layout pada Bootstrap
+- ### Menggunakan layout pada Bootstrap 
+     Layout di dalam Bootstrap merupakan langkah untuk  memberikan struktur terhadap susunan komponen agar rapi. <br/>
+     
+     a) Forms <br/>
+     
+     ```html
+        <form>
+          <input class="form-control" type="text" placeholder="Pencarian ..." />
+          <button class="btn btn-success" type="submit">Masukan</button>
+        </form>
+     ```
+     
+     <br/>
+     
+     b) Utilitas Margin <br/>
+     
+     ```html
+        <div class="mb-3">
+          <input class="form-control" type="text" placeholder="Pencarian ..." />
+          <button class="btn btn-success" type="submit">Masukan</button>
+        </div>
+     ```
+     
+     <br/>
+     
+     c) Form Grid <br/>
+     
+     ```html
+        <div class="row">
+          <div class="col-md-4 col-12 col-sm-6">
+            <input class="form-control" type="text" placeholder="Pencarian ..." />
+            <button class="btn btn-success" type="submit">Masukan</button>
+          </div>
+        </div>
+     ```
+     
+     <br/>
+     
+     d) Gutters <br/>
+     
+     ```html
+        <div class="row g-3">
+          <div class="col-12">
+            <input class="form-control" type="text" placeholder="Pencarian ..." />
+            <button class="btn btn-success" type="submit">Masukan</button>
+          </div>
+          
+          <div class="col-12">
+            <input class="form-control" type="text" placeholder="Pencarian ..." />
+            <button class="btn btn-success" type="submit">Masukan</button>
+          </div>
+        </div>
+     ```
+     
+     <br/>
+     
 - ### Menggunakan content pada Bootstrap
+    Konten pada Bootstrap merupakan langkah untuk memberikan isi pada halaman website.  <br/>
+      
+    a) Reebot <br/>
+     Merupakan berbagai macam koleksi element CSS. <br/>
+    
+    b) Typography <br/>
+     Merupakan teks yang akan ditampilkan di dalam sebuah website. <br/>
+     Contoh: <br/>
+       - `<h1>` ... `<h6>` <br/>
+       - `<p>` <br/>
+  
+     Ada beberapa styling milik Bootstrap yang digunakan oleh teks <br/>
+       
+   ```html
+     <p class="h1">Ini Bootstrap</p> // memberikan heading 1
+          
+     <p class="lead"> //membuat teks menonjol
+       ini Bootstrap
+     </p>
+        
+     <blockquote class="blockquote">
+       <p>Ini Bootstrap </p> //memberikan mode quoting   
+     </blockquote>
+          
+     <div>
+      <p class="text-center">Ini Bootstrap </p> // membuat teks rata tengah
+      <p class="text-start">Ini Bootstrap </p> //membuat teks rata kiri
+      <p class="text-end">Ini Bootstrap </p> //membuat teks rata kanan
+     </div>
+              
+    ```
+      
+     <br/>
+  
+    c) Image <br/>
+     Merupakan langkah pengelolah gambar di dalam bootstrap <br/>
+  
+     Ada beberapa styling di dala image : <br/>
+  
+    ```html
+       <img src="..." class="img-fluid" alt="..."> //tinggi maksimal dan lebar auto
+       <img src="..." class="img-thumbnail" alt="..."> //membuat tinggi dan lebar sebesar 200px dengan border-radius sebesar 1px
+    ```
+  
+     <br/>
+  
+    d) Table <br/>
+       Merupakan langkah pembuatan table dengan styling versi bootstrap <br/>
+      
+       Table umum milik Bootstrap : <br/>
+  
+     ```html
+     <table class="table">
+        <thead>
+            <tr>No</tr>
+            <tr>Nama</tr>
+        </thead>
+        <tbody>
+            <td>1</td>
+          <td>Hafi</td>
+        </tbody>
+      </table>
+    ```
+  
+    <br/>
+  
+  e) Figures <br/>
+     Merupakan langkah pembuatan gambar dengan didampingin oleh teks. <br/>
+       
+     ```html
+        <figure class="figure">
+          <img src="..." class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption">Ini adalah gambar Saya.</figcaption>
+        </figure>
+     ```
+      
 - ### Menggunakan component pada Bootstrap
+   Merupakan komponen HTML yang telah dibuat secara instan oleh Bootstrap. <br/>
+      
+   Ada banyak contoh salah satunya adalah pembuatan `button` <br/>
+   
+   ```html
+      <button class="btn btn-success">Klik</button>
+   ```
+  
 - ### Membuat website responsif menggunakan Bootstrap
+
+   ```html
+      <body>
+  <!-- Navigasi -->
+        <nav class="navbar navbar-big navbar-expand-md bg-light fixed-top">
+            <div class="container">
+              <a class="navbar-brand page-scroll" href="#home" ><h3><b><span class="text-dark judulwegrow">Nusanta</span><span class="text-danger">raya</span></b></h3></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="las la-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-center">
+                  <li class="nav-item mx-3">
+                    <a class="button-nav nav-link active page-scroll" aria-current="page" href="#home" >Home</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <a class="button-nav nav-link active page-scroll" aria-current="page" href="#about" >About Us</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <a class="button-nav nav-link active page-scroll" aria-current="page" href="#products">Products</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <a class="button-nav nav-link active page-scroll" aria-current="page" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <a class="button-nav nav-link active page-scroll" aria-current="page" href="#contact">Contact</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav d-flex mb-2 mb-lg-0 text-center">
+                    <li class="get-started nav-item mx-3">
+                        <a class="get-started-1 nav-link active" aria-current="page" href="#">Explore!</a>
+                      </li>
+                </ul>
+                <ul class="navbar-nav d-flex mb-2 mb-lg-0 text-center">
+                  <li class="nav-item mx-3">
+                      <p class="text-success">Visitors : <span class="count">0</span></p>
+                    </li>
+              </ul>
+
+              </div>
+            </div>
+          </nav>
+
+          <!-- Banner -->
+    <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+        <div class="content text-center">
+            <h1 class="text-dark text-banner-h1 welcome-text">Welcome to Nusanta<span class="text-danger">raya</span></h1>
+            <!-- <p class="text-banner-p">We provide a wide range of needs for your industry. We provide plantation (mushroom) and fishery resources (fish and shrimp)</p> -->
+            <a class="get-started-banner nav-link active" aria-current="page" href="#">Explore!</a>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="container-fluid aboutus">
+    <div class="container about pt-5 pb-5" id="about">
+      <h2 class="text-center">About Us</h2>
+      <div class="row pt-3">
+        <div class="col-md-6 text-center">
+          <p>Nusantaraya is one of the companies engaged in international trade. The company has been in good contact with and cooperated with several international companies.</p>
+          <p class="border p-3">
+            <b><span class="text-center">Vision</span></b><br>
+            <i class="las la-eye la-3x"></i><br>
+            To become a quality agricultural (mushroom) and fishery export company (shrimp and fish) by paying attention to the welfare of local Indonesian workers to build a better future for the nation
+          </p>
+          <p class="border p-3">
+            <b><span class="text-center">Missions</span></b><br>
+            <i class="las la-scroll la-3x"></i><br>
+            <i class="las la-check-circle la-1x"></i> Meet customer satisfaction by providing product quality by paying attention to the quality of delivery and production times<br><br>
+            <i class="las la-check-circle la-1x"></i>
+            Pay attention to local workers to expand agricultural and fishery resources
+          </p>
+
+          <a href="#" class="btn btn-primary">Get More</a>
+
+        </div>
+        <div class="col-md-6 pt-3 pb-3">
+          <img src="/img/img1.jpg" class="img-fluid img-1" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="container-fluid products">
+    <div class="container products pt-5 pb-5" id="products">
+      <h2 class="text-center">Products</h2>
+
+      <div class="row">
+        <a href="#" class="col-md-4  col-lg-3 col-sm-6 col-xs-6 col-xl-3 produk-konten p-3 link-produk">
+        <!-- <div class=""> -->
+          <div class="card align-items-center justify-content-center shadow" style="width: 15rem;">
+            <img src="/img/vaname.jpg" class="card-img-top" alt="..." width="239" height="239">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        <!-- </div> -->
+      </a>
+
+      <a href="#" class="col-md-4 col-lg-3 col-sm-6 col-xs-6 col-xl-3 produk-konten p-3 link-produk">
+        
+          <div class="card align-items-center justify-content-center shadow" style="width: 15rem;">
+            <img src="/img/flower.webp" class="card-img-top" alt="..." width="239" height="239">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        
+      </a>
+
+      <a href="#" class="col-md-4 col-lg-3 col-sm-6 col-xs-6 col-xl-3 produk-konten p-3 link-produk">
+        <!-- <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6 produk-konten pt-2"> -->
+          <div class="card align-items-center justify-content-center shadow" style="width: 15rem;">
+            <img src="/img/lobster.png" class="card-img-top" alt="..." width="239" height="239">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        <!-- </div> -->
+      </a>
+
+      <a href="#" class="col-md-4  col-lg-3 col-sm-6 col-xs-6 col-xl-3 produk-konten p-3 link-produk">
+        <!-- <div class="col-md-4 offset-md-1 col-lg-3 col-sm-6 col-xs-6 produk-konten pt-2"> -->
+          <div class="card align-items-center justify-content-center shadow" style="width: 15rem;">
+            <img src="/img/rebon.webp" class="card-img-top" alt="..." width="239" height="239">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        <!-- </div> -->
+      </a>
+
+      <a href="#" class="col-md-4 col-lg-3 col-sm-6 col-xs-6 col-xl-3 produk-konten p-3 link-produk">
+        <!-- <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6 produk-konten pt-2"> -->
+          <div class="card align-items-center justify-content-center shadow" style="width: 15rem;">
+            <img src="/img/jamur_kuping.jpg" class="card-img-top" alt="..." width="239" height="239">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        <!-- </div> -->
+        </a>
+
+        <a href="#" class="col-md-4 col-lg-3 col-sm-6 col-xs-6 col-xl-3 produk-konten p-3 link-produk">
+        <!-- <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6 produk-konten pt-2"> -->
+          <div class="card align-items-center justify-content-center shadow" style="width: 15rem;">
+            <img src="/img/jamur_tiram.jpg" class="card-img-top" alt="..." width="239" height="239">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        <!-- </div> -->
+        </a>
+
+        <a href="#" class="col-md-4  col-lg-3 col-sm-6 col-xs-6 col-xl-3 produk-konten p-3 link-produk">
+        <!-- <div class="col-md-4 offset-md-1 col-lg-3 col-sm-6 col-xs-6 produk-konten pt-2"> -->
+          <div class="card align-items-center justify-content-center shadow" style="width: 15rem;">
+            <img src="/img/jamur_kancing.jpg" class="card-img-top img-produk" alt="..." width="239" height="239">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        <!-- </div> -->
+        </a>
+
+        <a href="#" class="col-md-4 col-lg-3 col-sm-6 col-xs-6 col-xl-3 produk-konten p-3 link-produk">
+        <!-- <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6 produk-konten pt-2"> -->
+          <div class="card align-items-center justify-content-center shadow" style="width: 15rem;">
+            <img src="/img/jamur_shitake.jpg" class="card-img-top" alt="..." width="239" height="239">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        <!-- </div> -->
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="container-fluid service">
+    <div class="container services pt-5 pb-5" id="services">
+      <h2 class="text-center">Services</h2>
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 col-sm-6 col-xl-3 services-konten pt-2">
+          <div class="card text-center " style="width: 16rem;">
+            <div class="card-body">
+              <i class="las la-ship la-3x"></i>
+              <h5 class="card-title">Ship Delivery</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Click More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 col-sm-6 col-xl-3 services-konten pt-2">
+          <div class="card text-center " style="width: 16rem;">
+            <div class="card-body">
+              <i class="las la-plane la-3x"></i>
+              <h5 class="card-title">Aircraft Delivery</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Click More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 col-sm-6 col-xl-3 services-konten pt-2">
+          <div class="card text-center " style="width: 16rem;">
+            <div class="card-body">
+              <i class="las la-box la-3x"></i>
+              <h5 class="card-title">Cold Storage</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Click More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 col-sm-6 col-xl-3 services-konten pt-2">
+          <div class="card text-center " style="width: 16rem;">
+            <div class="card-body">
+              <i class="las la-percent la-3x"></i>
+              <h5 class="card-title">Discount</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Click More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contactus -->
+  <section class="contact-me"> 
+    <div class="containers" id="contact">
+      <div class="contactInfo">
+        <div>
+          <h2 class="text-center">Contact Info</h2>
+          <ul class="info">
+            <li>
+              <span><i class="las la-map-marker-alt la-3x"></i></span>
+              <span>Graha Permata Sidorejo Indah Q-18 RT 50 RW 10, <br>
+              Sidorejo,<br>
+              Krian,<br>
+              East Java,<br>
+              Indonesia</span>
+            </li>
+            <li>
+              <span><i class="las la-envelope la-3x"></i></span>
+              <span>nusantaraya@gmail.com</span>
+            </li>
+            <li>
+              <span><i class="las la-phone la-3x"></i></span>
+              <span>+62 8123456789</span>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="sci">
+          <li><a href="#"><i class="lab la-instagram la-2x"></i> </a></li>
+          <li><a href="#"><i class="lab la-facebook la-2x"></i></a></li>
+          <li><a href="#"><i class="lab la-linkedin-in la-2x"></i></a></li>
+        </ul>
+
+      </div>
+      <div class="contactForm">
+        <h2 class="text-center">Send a Message</h2>
+        <div class="formBox">
+
+          <div class="inputBox w50">
+            <input type="text" required>
+            <span>Your Name</span>
+          </div>
+
+          <div class="inputBox w50">
+            <input type="text" required>
+            <span>Your Company</span>
+          </div>
+
+          <div class="inputBox w50">
+            <input type="text" required>
+            <span>Your Phone</span>
+          </div>
+
+          <div class="inputBox w50">
+            <input type="text" required>
+            <span>Your E-mail</span>
+          </div>
+
+          <div class="inputBox w100">
+            <textarea name="" id="" cols="" rows="" required></textarea>
+            <span>Your Message</span>
+          </div>
+
+          <div class="inputBox w50">
+            <input type="submit" value="Send">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll on top -->
+  <a href="#" class="to-top nav-link disabled">
+    <i class="las la-chevron-up"></i>
+  </a>
+   ```
