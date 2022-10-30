@@ -56,7 +56,82 @@
 
 ## 3 Express Routing & Middleware
 - ### Membuat Routing
+  <div align="justify">Routing merupakan manajemen endpoint dari sebuah aplikasi atau website untuk melakukan request dan memberikan response oleh client. Terdapat banyak sekali method untuk mengakses routing yaitu : </div> <br/>
+  
+  ```md
+    GET, mendapatkan data
+    POST, mengirim data
+    PUT, mengupdate data
+    DELETE, menghapus data
+  ```
+  
+  <br/>
+  
+  Cara routing : <br/>
+  
+  ```js
+    app.get('/', (req, res) => {
+      res.send("Halo dunia")
+    })
+    
+    app.post('/', (req, res) => {
+      res.send("Telah ditambahkan")
+    })
+    
+    app.put('/', (req, res) => {
+      res.send("Telah diupdate")
+    })
+    
+    app.delete('/', (req, res) => {
+      res.send("Telah dihapus")
+    })
+    
+    app.get('/siswa', (req, res) => {
+      res.send("Dapat data siswa")
+    })
+    
+    app.get('/siswa/:id', (req, res) => {
+      res.send("Dapat data siswa dengan id")
+    })
+    
+  ```
+  
+  <br/>
+
 - ### Membuat Middleware
+  <div align="justify">Middleware merupakan fungsi yang terdiri dari 3 parameter yaitu req (untuk mendapatkan data), res (memberikan response), dan next (untuk melanjutkan ke route lain yang berhubungan). </div> <br/>
+  
+  Bentuk middleware : <br/>
+  
+  ```js
+    // application level middleware
+    const middle1 = (req,res,next) => {
+      console.log("middle 1")
+      next()
+    }
+    
+    app.use(middle1)
+    
+    // router level middleware
+    const express = require('express')
+    const Router = express.Router()
+    const middle2 = (req,res,next) => {
+      console.log("middle 2")
+      next()
+    }
+    Router.user(middle2)
+    
+    // error handling level middleware
+    const express = require('express')
+    const Router = express.Router()
+    const middle3 = (err,req,res,next) => {
+      console.log("middle 3")
+      next()
+    }
+    Router.user(middle3)
+  ```
+  
+  <br/><br/>
 
 ## 4 Design database with MySQL
 - ### Membuat Diagram Entity
