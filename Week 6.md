@@ -134,6 +134,25 @@
   <br/><br/>
 
 ## 4 Design database with MySQL
+  Akan ada sebuah studi kasus : <br/>
+  
+  ```md
+    Peminjaman buku perpustakaan oleh seorang mahasiswa.
+    1) Mahasiswa dapat meminjam banyak buku di perpustakaan dan banyak buku dapat dipinjam oleh banyak mahasiswa
+    2) Apabila mahasiswa telat mengembalikan sebuah buku akan dikenakan denda untuk tiap bukunya
+  ```
+  
+  <br/>
+  
 - ### Membuat Diagram Entity
+  ![github drawio](https://user-images.githubusercontent.com/71125093/198930036-8b9d8b7f-fec8-4f5b-b710-c45fe09e4167.png)
+  
+  <br/>
+   <div align="justify">Terdapat 3 entitas utama yaitu Mahasiswa, Buku, dan Denda yang memiliki 2 entitas konjungsi yaitu pinjam (Berisi data peminjaman buku) dan bayar (Berisi data pembayaran denda).</div> <br/>
+  
 - ### Menentukan Atribut Entity
+ ![github drawio (1)](https://user-images.githubusercontent.com/71125093/198931539-9276d306-a1f8-4c53-a111-edba948bae65.png)
+
 - ### Menentukan dan Membuat Relasi Entity
+  ![github drawio (2)](https://user-images.githubusercontent.com/71125093/198931659-a6843998-aedb-4352-8c12-be38f65099d2.png)
+
