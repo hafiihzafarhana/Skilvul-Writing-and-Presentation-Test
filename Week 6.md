@@ -91,8 +91,128 @@
 
 ## 2 MySQL Lanjutan
 - ### Memahami Dan Melakukan Manipulasi Query Tingkat Lanjut yang Sering Digunakan
-- ### Memahami dan Membuat Relational Antar Table 
+  Manipulasi tingkat lanjut dari MySQL: <br/>
+  
+  A) Menggabungkan tabel yang saling berelasi : <br/>
+  
+  - ### INNER JOIN
+    <div align="justify">Semua row akan diambil selama kolom cocok dengan kondisi yang ditentukan.</div> <br/>
+    
+    ```sql
+      SELECT * FROM pengguna INNER JOIN asal ON pengguna.id_asal = asal.pengguna.id_asal
+    ```
+    
+    <br/>
+    
+  - ### LEFT JOIN
+    <div align="justify">Semua record dari tabel sisi kiri akan dipilih. Apabila kondisi tidak cocok, maka akan bernilai NULL</div> <br/>
+    
+    ```sql
+      SELECT * FROM pengguna LEFT JOIN asal ON pengguna.id_asal = asal.pengguna.id_asal
+    ```
+    
+    <br/>
+    
+  - ### RIGHT JOIN
+    <div align="justify">Semua record dari tabel sisi kanan akan dipilih. Apabila kondisi tidak cocok, maka akan bernilai NULL</div> <br/>
+    
+    ```sql
+      SELECT * FROM pengguna RIGHT JOIN asal ON pengguna.id_asal = asal.pengguna.id_asal
+    ```
+    
+    <br/>
+    
+  B) Fungsi Aggregate <br/>
+     Fungsi ini akan mengambil satu nilai setelah dilakukan penghitungan dari kumpulan data. Jenis fungsinya : <br/>
+     
+     - ### MAX (Mendapatkan nilai terbesar) <br/>
 
+       ```sql
+        SELECT MAX(id_user) FROM pengguna;
+       ```
+       
+       <br/>
+       
+     - ### MIN (Mendapatkan nilai terkecil) <br/>
+
+       ```sql
+        SELECT MIN(id_user) FROM pengguna;
+       ```
+       
+       <br/>
+       
+     - ### SUM (Menambahkan seluruh nilai) <br/>
+
+       ```sql
+        SELECT MAX(sub_total) as total FROM pesanan;
+       ```
+       
+       <br/>
+       
+     - ### COUNT (Menghitung jumlah baris) <br/>
+
+       ```sql
+        SELECT COUNT(id_user) FROM pengguna;
+       ```
+       
+       <br/>
+       
+     - ### AVG (Menghitung rata-rata nilai) <br/>
+
+       ```sql
+        SELECT AVG(sub_total) as total FROM pesanan;
+       ```
+       
+       <br/>
+       
+     - ### UNION (Menggabungkan hasil dari pernyataan SELECT) <br/>
+
+       ```sql
+        SELECT * FROM data1
+        UNION
+        SELECT * FROM data2
+       ```
+       
+       <br/>
+  
+     - ### GROUP BY (Mengelompokan baris yang memiliki nilai yang sama ke dalam baris ringkasan) <br/>
+
+       ```sql
+        SELECT * FROM pengguna GROUP BY id_user;
+       ```
+       
+       <br/>
+       
+     - ### HAVING (Pengganti WHERE apabila berjalan dengan GROUP BY) <br/>
+
+       ```sql
+        SELECT * FROM pengguna GROUP BY id_user HAVING id_user > 10;
+       ```
+       
+       <br/>
+- ### Memahami dan Membuat Relational Antar Table
+  Sebelum memasuki relasi database, harus memahami jenis relasi terlebih dahulu : <br/>
+  
+  A) Relasi ONE to MANY <br/>
+     Relasi ini menghubungkan 1 tabel dengan banyak tabel yang akan dituju <br/>
+  
+  B) Relasi ONE to ONE <br/>
+     Relasi ini menghubungkan 1 tabel dengan 1 tabel yang dituju. <br/>
+     
+  C) Relasi MANY to MANY <br/>
+     Relasi ini menghubungkan banyak tabel dengan banyak tabel yang dituju. <br/>
+     
+  <div align="justify">Lalu, setelah memahami hal di atas perlu juga memahmi PRIMARY KEY (Menjadi acuan utama dari setiap tabel) dan FOREIGN KEY (Merupakan PRIMARY KEY yang telah dihubungkan dengan tabel yang dituju). </div> <br/> 
+
+  Cara menghubungkan ke dua tabel di SQL : <br/>
+  
+   ```sql
+      SELECT * FROM pengguna INNER JOIN asal ON pengguna.id_asal = asal.pengguna.id_asal
+    ```
+    
+    <br/>
+    JOIN merupakan langkah yang digunakan untuk menghubungkan atau berelasi antar tabel. <br/><br/>
+    
 ## 3 Authentication & Authorization
 - ### Memahami Beberapa Variasi Authentication dan Authorization
 - ### Memahami Perbedaan Authnentication, Authorization, dan Encryption
