@@ -95,7 +95,7 @@
   
   A) Menggabungkan tabel yang saling berelasi : <br/>
   
-  - ### INNER JOIN
+  - #### INNER JOIN
     <div align="justify">Semua row akan diambil selama kolom cocok dengan kondisi yang ditentukan.</div> <br/>
     
     ```sql
@@ -104,7 +104,7 @@
     
     <br/>
     
-  - ### LEFT JOIN
+  - #### LEFT JOIN
     <div align="justify">Semua record dari tabel sisi kiri akan dipilih. Apabila kondisi tidak cocok, maka akan bernilai NULL</div> <br/>
     
     ```sql
@@ -113,7 +113,7 @@
     
     <br/>
     
-  - ### RIGHT JOIN
+  - #### RIGHT JOIN
     <div align="justify">Semua record dari tabel sisi kanan akan dipilih. Apabila kondisi tidak cocok, maka akan bernilai NULL</div> <br/>
     
     ```sql
@@ -125,7 +125,7 @@
   B) Fungsi Aggregate <br/>
      Fungsi ini akan mengambil satu nilai setelah dilakukan penghitungan dari kumpulan data. Jenis fungsinya : <br/>
      
-     - ### MAX (Mendapatkan nilai terbesar) <br/>
+     - #### MAX (Mendapatkan nilai terbesar) <br/>
 
        ```sql
         SELECT MAX(id_user) FROM pengguna;
@@ -133,7 +133,7 @@
        
        <br/>
        
-     - ### MIN (Mendapatkan nilai terkecil) <br/>
+     - #### MIN (Mendapatkan nilai terkecil) <br/>
 
        ```sql
         SELECT MIN(id_user) FROM pengguna;
@@ -141,7 +141,7 @@
        
        <br/>
        
-     - ### SUM (Menambahkan seluruh nilai) <br/>
+     - #### SUM (Menambahkan seluruh nilai) <br/>
 
        ```sql
         SELECT MAX(sub_total) as total FROM pesanan;
@@ -149,7 +149,7 @@
        
        <br/>
        
-     - ### COUNT (Menghitung jumlah baris) <br/>
+     - #### COUNT (Menghitung jumlah baris) <br/>
 
        ```sql
         SELECT COUNT(id_user) FROM pengguna;
@@ -157,7 +157,7 @@
        
        <br/>
        
-     - ### AVG (Menghitung rata-rata nilai) <br/>
+     - #### AVG (Menghitung rata-rata nilai) <br/>
 
        ```sql
         SELECT AVG(sub_total) as total FROM pesanan;
@@ -165,7 +165,7 @@
        
        <br/>
        
-     - ### UNION (Menggabungkan hasil dari pernyataan SELECT) <br/>
+     - #### UNION (Menggabungkan hasil dari pernyataan SELECT) <br/>
 
        ```sql
         SELECT * FROM data1
@@ -175,7 +175,7 @@
        
        <br/>
   
-     - ### GROUP BY (Mengelompokan baris yang memiliki nilai yang sama ke dalam baris ringkasan) <br/>
+     - #### GROUP BY (Mengelompokan baris yang memiliki nilai yang sama ke dalam baris ringkasan) <br/>
 
        ```sql
         SELECT * FROM pengguna GROUP BY id_user;
@@ -183,7 +183,7 @@
        
        <br/>
        
-     - ### HAVING (Pengganti WHERE apabila berjalan dengan GROUP BY) <br/>
+     - #### HAVING (Pengganti WHERE apabila berjalan dengan GROUP BY) <br/>
 
        ```sql
         SELECT * FROM pengguna GROUP BY id_user HAVING id_user > 10;
@@ -215,8 +215,90 @@
     
 ## 3 Authentication & Authorization
 - ### Memahami Beberapa Variasi Authentication dan Authorization
+   - #### Jenis Autentikasi
+     a) Single Factor Authentication <br/>
+     <div align="justify">Autentikasi yang sangat sederhana dan banyak digunakan di masa sekarang. Autentikasi ini berupa memasukan sebuah identitas seperti password dan username. </div> <br/>
+     
+     b) Two Factor Authentication <br/>
+     <div align="justify">Autentikasi ini dibuat setelah Single Factor Authentication dipakai yaitu adanya tambahan autentikasi seperti OTP dan sidik jari atau wajah.</div> <br/>
+     
+     c) Multi Factor Authentication <br/>
+     <div align="justify">Autentikasi yang mewajibkan pengguna untuk memverifikasi 3 jenis identitas seperti ID pengguna (password dan username), sidik jari, dan beberapa pertanyaan yang berhubungan dengan pengguna. </div> <br/>
+     
 - ### Memahami Perbedaan Authnentication, Authorization, dan Encryption
+   - #### Authentication
+        <div align="justify">Merupakan metode terhadap seorang pengguna mengkonfirmasi sebagai pengguna valid yang dapat mengakses sebuah akun atau informasi tertentu</div> <br/>
+        
+   - #### Authorization
+        <div align="justify">Merupakan proses penentuan terhadap pengguna yang terautentikasi tersebut diizinkan atau ditolak untuk melakukan satu atau lebih akses terhadap sistem.</div> <br/>
+        
+   - #### Encryption 
+        <div align="justify">Merupakan proses pengubahan data menjadi format yang tidak bisa dibaca terkecuali apabila ada seseorang yang memiliki kunci untuk mengubah kembali data yang terenkripsi</div> <br/>
+        
 - ### Membuat Authentication dan Authorization
+  Untuk penerapanya bisa menggunakan Express JS dengan bantuan module `jsonwebtoken`. <br/>
+  
+  ```js
+      const express = require("express");
+      const app = express();
 
+      const PORT = 3000;
+
+      app.use(express.json());
+      
+      const users = [
+        { id: 1, email: "hafi@gmail.com", password: "hafi" },
+        { id: 2, email: "ihza@gmail.com", password: "ihza" },
+      ];
+      
+      const KEY = "IblisHanyaTidakSujudKepadaAdamTetapiTidakDengan Allah";
+
+      // Proses autentikasi
+      app.get("/auth", (req, res) => {
+        const { email, password } = req.body;
+        const userData = users.find(
+          (item) => email === item.email && password === item.password
+        );
+        const token = jwt.sign(
+          {
+            id: userData.id,
+          },
+          KEY
+        );
+
+        if (userData) {
+          res.json({
+            message: "success login",
+            token,
+          });
+        } else {
+          res.status(401).json({
+            message: "email or password are incorrect",
+          });
+        }
+      });
+      
+      // Proses autorisasi
+      app.get("/films/:id/subscribe", (req, res) => {
+        try {
+          const auth = req.headers.authorization;
+          const token = auth.split(" ")[1];
+
+          jwt.verify(token, KEY);
+
+          res.json({
+            message: "subscribe moviess",
+          });
+        } catch (error) {
+          res.status(500).json({
+            message: error.message
+          });
+        }
+      })
+
+      app.listen(PORT, () => {
+        console.log("server running on port ", PORT);
+      });
+  ```
 ## 4 Sequelize
 - ### Memahami dan Menggunakan Sequalize
