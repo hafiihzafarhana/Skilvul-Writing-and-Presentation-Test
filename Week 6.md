@@ -302,3 +302,79 @@
   ```
 ## 4 Sequelize
 - ### Memahami dan Menggunakan Sequalize
+  Langkah menggunakan Sequelize sebagai ORM dari MySQL di Node JS dan Express JS:<br/>
+  
+  a) Install: <br/>
+     Express JS <br/>
+     
+     ```bash
+        npm i express
+     ```
+     
+     <br/>
+     
+     mysql2 <br/>
+     
+     ```bash
+        npm i mysql2
+     ```
+     
+     <br/>
+     
+     sequelize <br/>
+     
+     ```bash
+        npm i sequelize
+     ```
+     
+     <br/>
+     
+     sequelize-cli <br/>
+     
+     ```bash
+        npm i sequelize
+     ```
+     
+     <br/>
+     
+  b) Lakukan inisialisasi project <br/>
+  
+     ```bash
+        npx sequelize-cli init
+     ```
+     
+     <br/>
+     
+  c) Konfigurasi database (Harus sudah memiliki MySQL) <br/>
+     Berada di `config/config.js` <br/>
+     
+     ```js
+        require("dotenv").config();
+        module.exports = {
+          development: {
+            username: "root", //default
+            password: "", //default
+            database: "Nama Database Yang Telah Dibuat",
+            host: "127.0.0.1", //default
+            dialect: "mysql"
+          }
+        }
+     ```
+     
+     <br/>
+     
+  d) Generate model <br/>
+  
+     ```bash
+        npx sequelize-cli model:generate --name Noted -- attributes title:string
+     ```
+     
+     <br/>
+     
+  e) Lakukan migrasi ke dalam database <br/>
+  
+     ```bash
+        npm sequelize-cli db:migrate
+     ```
+  
+     
