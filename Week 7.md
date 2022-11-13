@@ -941,8 +941,97 @@ Request :
    "msg" : "berhasil dihapus"
 ```
   
+  <br/>
 
 - ### Membuat Web Server dan RESTFul API Menggunakan Mongoose
+
+  ```js
+     const express = require('express');
+     const { default: mongoose } = require('mongoose');
+     
+     mongoose.connect('mongodb://localhost:27017/commentYT', { useNewUrlParser: true, useUnifiedTopology: true});
+     const db = mongoose.connection;
+     db.on('error', err => console.error(err));
+     db.once('open', () => console.log("db sukses"));
+
+     const commentSkema = mongoose.Schema({
+          pengguna:String,
+          pesan:String,
+          likes:Number,
+          editable:Boolean,
+          balasan: [{
+              pengguna:String,
+              pesan:String,
+              likes:Number,
+          }]
+     })
+
+     const CommentModel = mongoose.model("Comment", commentSkema);
+     
+     const app = express();
+     
+     app.post('/tambah-data',(req,res)=>{
+      let pesanPost = req.body.pesanData
+      const pesanBaru = new CommentModel({
+          pengguna:"Ini Kamu",
+          pesan:pesanPost,
+          likes:0,
+          editable:true,
+          balasan: []
+      })
+      .save();
+
+      res.send('')
+     })
+     
+     app.post('/get-more-data', (req,res) => {
+      let pesanIncrement = req.body.pesanIncrement;
+      CommentModel.find({},(err,data) => {
+          if(err) {
+              throw err;
+          } else {
+              res.send(data)
+          }
+      })
+      .skip(pesanIncrement)
+      .limit(10)
+     })
+     
+     app.post('/tambah-sub-komen', (req,res) => {
+      let subPesan = req.body.subPesanData;
+      let idPesan = req.body.pesanId;
+
+      const subPesanBaru = {
+          pengguna:"Ini Kamu",
+          pesan:subPesan,
+          likes:0,
+          editable:true,
+          balasan: []
+      }
+
+      CommentModel.updateOne({_id:idPesan}, {$push:{balasan:subPesanBaru}}, (err, data) => {
+          if(err){
+              console.log("checkkkk")
+              throw err;
+          } else{
+              // kirim balik empty data
+              res.send('')
+          }
+      })
+      
+      app.post('/hapus-komen', (req,res) => {
+        let commentId = req.body.pesanId
+        CommentModel.deleteOne({_id:commentId}, (err,data) => {
+            if(!err){
+                res.send('');
+            }
+        })
+      })
+      
+      app.listen(process.env.PORT || port_no, (req, res) => {
+        console.log(`port running atport number : ${port_no}`)
+      })
+  ```
 
 ## 4 Docker
 - ### Container Pada Docker
