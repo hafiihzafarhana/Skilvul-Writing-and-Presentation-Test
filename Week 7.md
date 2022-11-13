@@ -814,6 +814,15 @@
     
 ## 3 Mongoose
 - ### Membuat API Specification
+
+| Atrributes    | Tipe Data | Deksripsi                     |
+| ------------- | --------- | ----------------------------  |
+| pengguna      | String    | nama akun pengguna            |
+| pesan         | String    | untuk menambah pesan pengguna |
+| likes         | Integer   | untuk menambah pesan pengguna |
+| editable      | Boolean   | untuk mengetahui pesan bisa diedit atau tidak            |
+| balasan       | Array     | data diri pengguna            |
+
 - ### Membuat Web Server dan RESTFul API Menggunakan Mongoose
 
 ## 4 Docker
@@ -821,3 +830,6 @@
 - ### Basic Dari Docker
 
 ## 5 API with Post Man
+- ### Manfaat Postman
+- ### Testing API dengan Postman
+- ### API Documentation dengan Postman
