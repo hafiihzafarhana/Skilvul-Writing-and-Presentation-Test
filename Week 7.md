@@ -1071,9 +1071,31 @@ Request :
      docker ps
   ```
   
-  <br/>
+  <br/><br/>
 
 ## 5 API with Post Man
 - ### Manfaat Postman
+  Secara umum Postman digunakan untuk memanggil sebuah API, tetapi sekarang menyediakan fitur lain seperti : Sharing Collection API for Documentation (free), Testing API (free), Realtime Collaboration Team (paid), Monitoring API (paid), Integration (paid) <br/>
+  
 - ### Testing API dengan Postman
+  
+  a) Menuju ke workspace di Postman <br/>
+  b) Klik simbol + <br/>
+  c) Masukan API end point (url) dan pilih method (GET, POST, SELECT, DELETE) <br/>
+  d) Klik send <br/>
+ 
 - ### API Documentation dengan Postman
+
+  - #### GET lokasi
+
+  ```md
+  https:localhost:5000/
+  ```
+  
+  <br/>
+  
+  Params <br/>
+  
+  | format      | json            |
+  
+  
