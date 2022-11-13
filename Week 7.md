@@ -665,7 +665,153 @@
   <br/>
 
 - ### Relasi Pada MongoDB
-
+    
+  - #### One-to-One
+      Pada contohnya satu pengguna hanya memiliki satu nama saja. <br/>
+      
+      ```js
+        {
+            "_id": "ObjectId('AAA')",
+            "name": "Joe Karlsson",
+            "company": "MongoDB",
+            "twitter": "@JoeKarlsson1",
+            "twitch": "joe_karlsson",
+            "tiktok": "joekarlsson",
+            "website": "joekarlsson.com"
+        }
+      ```
+      
+      <br/>
+      
+   - #### One-to-Few
+      Pada contohnya satu pengguna memungkinkan memiliki sebuah data yang cukup banyak. Dan data tersebut akan dimasukan ke dalam Array secara bersamaan. <br/>
+      
+      ```js
+        {
+            "_id": "ObjectId('AAA')",
+            "name": "Joe Karlsson",
+            "company": "MongoDB",
+            "twitter": "@JoeKarlsson1",
+            "twitch": "joe_karlsson",
+            "tiktok": "joekarlsson",
+            "website": "joekarlsson.com",
+            "addresses": [
+                { "street": "123 Sesame St", "city": "Anytown", "cc": "USA" },  
+                { "street": "123 Avenue Q",  "city": "New York", "cc": "USA" }
+            ]
+        }
+      ```
+      
+      <br/>
+      
+  - #### One-to-Many
+      Pada contohnya seperti pengguna memiliki banyak catatan dan akan dimodel dengan bentuk reference. <br/> 
+      
+      `pengguna`
+      
+      ```js
+        {   "_id" : "ObjectID('bos1')",
+            "name": "Hafi",
+            "parts": ["ObjectID('AAAA')", "ObjectID('BBBB')", "ObjectID('CCCC')"]
+        }
+      ```
+      
+      `catatan`
+      
+      ```js
+        {
+            "_id" : "ObjectID('AAAA')",
+            "name" : "catatan 1"
+        },
+        {
+            "_id" : "ObjectID('BBBB')",
+            "name" : "catatan 2"
+        },
+        {
+            "_id" : "ObjectID('CCCC')",
+            "name" : "catatan 3"
+        }
+      ```
+      
+      <br/>
+      
+  - #### One-to-Squillions
+      </div align="justify">Pada contohnya adalah dibuatkan 2 koleksi yaitu koleksi pengguna dan catatan. Maka setiap catatan akan memiliki id reference dari pengguna. Konsepnya sama dengan One-to-Many, tetapi yang membedakan adalah setiap pengguna akan menyimpan id reference dari catatan. Hal itu sangat buruk karena setiap dokumen hanya akan menampung 16 mb saja. Sehingga apabila catatan semakin banyak, otomatis penyimpanan akan semakin besar. </div> <br/>
+      
+      `pengguna`
+      
+      ```js
+        {
+            "_id" : "ObjectID('bos1')",
+            "name": "Hafi",
+            "parts": ["ObjectID('AAAA')", "ObjectID('BBBB')", "ObjectID('CCCC')"]
+        }
+      ```
+      
+      `catatan`
+      
+      ```js
+        {
+            "_id" : "ObjectID('AAAA')",
+            "name" : "catatan 1",
+            "pengguna" : "ObjectID('bos1')"
+        },
+        {
+            "_id" : "ObjectID('BBBB')",
+            "name" : "catatan 2",
+            "pengguna" : "ObjectID('bos1')"
+        },
+        {
+            "_id" : "ObjectID('CCCC')",
+            "name" : "catatan 3",
+            "pengguna" : "ObjectID('bos1')"
+        }
+      ```
+      
+      <br/>
+      
+  - #### Many-to-Many
+      </div align="justify">Pada contohnya adalah dibuatkan 2 koleksi yaitu koleksi pengguna dan catatan. Maka setiap koleksi akan memiliki kumpulan id menyilang yaitu banyak pengguna dapat membuat banyak catatan dan banyak catatan dibuat oleh banyak pengguna. </div> <br/>
+      
+      `pengguna`
+      
+      ```js
+        {
+            "_id" : "ObjectID('bos1')",
+            "name": "Hafi",
+            "parts": ["ObjectID('AAAA')", "ObjectID('BBBB')", "ObjectID('CCCC')"]
+        },
+        {
+            "_id" : "ObjectID('bos2')",
+            "name": "Ihza",
+            "parts": ["ObjectID('AAAA')", "ObjectID('BBBB')", "ObjectID('CCCC')"]
+        }
+      ```
+      
+      `catatan`
+      
+      ```js
+        {
+            "_id" : "ObjectID('AAAA')",
+            "name" : "catatan 1",
+            "pengguna" : ["ObjectID('bos1')", "ObjectID('bos2')"]
+        },
+        {
+            "_id" : "ObjectID('BBBB')",
+            "name" : "catatan 2",
+            "pengguna" : "ObjectID('bos1')",
+            pengguna" : ["ObjectID('bos1')", "ObjectID('bos2')"]
+        },
+        {
+            "_id" : "ObjectID('CCCC')",
+            "name" : "catatan 3",
+            "pengguna" : "ObjectID('bos1')",
+            pengguna" : ["ObjectID('bos1')", "ObjectID('bos2')"]
+        }
+      ```
+      
+    <br/><br/>
+    
 ## 3 Mongoose
 - ### Membuat API Specification
 - ### Membuat Web Server dan RESTFul API Menggunakan Mongoose
