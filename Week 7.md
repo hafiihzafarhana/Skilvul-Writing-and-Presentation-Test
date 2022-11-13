@@ -1032,10 +1032,46 @@ Request :
         console.log(`port running atport number : ${port_no}`)
       })
   ```
+  
+  <br/> <br/>
 
 ## 4 Docker
 - ### Container Pada Docker
+  Container digunakan untuk menyatukan berbagai macam file yang dibutuhkan oleh perangkat lunak yang agar aplikasi dapat digunakan dimana saja. <br/>
+
 - ### Basic Dari Docker
+
+  Perintah download image docker di docker hub <br/>
+
+  ```docker
+     docker pull hafi
+  ```
+  
+  <br/>
+  
+  Perintah melihat kumpulan images <br/>
+
+  ```docker
+     docker images
+  ```
+  
+  <br/>
+  
+  Perintah menjalankan docker <br/>
+
+  ```docker
+     docker run hafi
+  ```
+  
+  <br/>
+  
+  Perintah melihat container yang berjalan <br/>
+
+  ```docker
+     docker ps
+  ```
+  
+  <br/>
 
 ## 5 API with Post Man
 - ### Manfaat Postman
