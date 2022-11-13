@@ -823,6 +823,125 @@
 | editable      | Boolean   | untuk mengetahui pesan bisa diedit atau tidak            |
 | balasan       | Array     | data diri pengguna            |
 
+  - #### Skema Tambah Data
+  
+  | Atrributes    | Tipe Data | Deksripsi                     |
+| ------------- | --------- | ----------------------------  |
+| pengguna      | String    | nama akun pengguna            |
+| pesan         | String    | untuk menambah pesan pengguna |
+| likes         | Integer   | untuk menambah pesan pengguna |
+| editable      | Boolean   | untuk mengetahui pesan bisa diedit atau tidak            |
+
+Request :
+
+- Method : POST
+- Endpoint : /tambah-data
+- Header :
+  - Content-Type : application/json
+  - Accept : application/json
+
+- Body : <br/>
+
+```javascript
+    {
+        "pengguna" : "string",
+        "pesan" : "string",
+        "likes" : "integer",
+        "editable" : "boolean",
+    }
+```
+
+<br/>
+
+- Response : <br/>
+
+```javascript
+    {
+        "msg" : "Berhasil Tambah Data",
+    }
+```
+
+<br/>
+
+  - #### Skema Dapat Pesan Baru
+  
+Request :
+
+- Method : GET
+- Endpoint : /quis/get-more-data
+- Header :
+  - Accept : application/json
+
+- Response : <br/>
+
+```js
+  {
+        "_id" : "string",
+        "pengguna" : "string",
+        "pesan" : "string",
+        "likes" : "integer",
+        "editable" : "boolean",
+        "balasan": [{
+          "pengguna":"string",
+          "pesan":"string",
+          "likes":"integer",
+        }]
+```
+
+<br/>
+
+  - #### Skema Tambah Sub Pesan Baru
+  
+Request :
+
+- Method : PUT
+- Endpoint : /tambah-sub-komen
+- Header :
+  - Accept : application/json
+
+- Body : <br/>
+
+```javascript
+    {
+        "pengguna" : "string",
+        "pesan" : "string",
+        "likes" : "integer",
+        "editable" : "boolean",
+    }
+```
+
+- Response : <br/>
+
+```javascript
+   "msg" : "berhasil dirubah"
+```
+
+<br/>
+
+  - #### Skema Hapus Pesan
+
+Request :
+
+- Method : DELETE
+- Endpoint : /hapus-komen
+- Header :
+  - Accept : application/json
+
+- Body : <br/>
+
+```javascript
+    {
+      "_id":string
+    }
+```
+
+- Response : <br/>
+
+```javascript
+   "msg" : "berhasil dihapus"
+```
+  
+
 - ### Membuat Web Server dan RESTFul API Menggunakan Mongoose
 
 ## 4 Docker
