@@ -543,8 +543,135 @@
 
     module.exports = router
   ```
+  
+  <br/> <br/>
      
 ## 2 Mongo DB
+- ### Basic Dari MongoDB
+  
+  Skema Mongo DB adalah JSON : <br/>
+  
+  ```json
+    {
+       field1: value1,
+       field2: value2,
+       field3: value3,
+       ...
+       fieldN: valueN
+    }
+  ```
+  
+  <br/>
+  
+  Tipe data skema dari Mongo DB : <br/>
+  
+  ```md
+    Object
+      Array
+
+      String
+
+      Number
+
+      Boolean
+
+      UUID
+
+      ObjectId
+
+      Binary Data
+
+      Mixed
+
+      Set
+
+      Dictionary
+  ```
+  
+  <br/>
+ 
+- ### Operasi CRUD Pada MongoDB
+  CRUD dengan menggunakan Mongo DB : <br/>
+  
+  a) Menambah banyak data <br/>
+  
+  ```js
+    db.orang.insertMany(
+      [
+        {nama:"hafi", umur: "20"},
+        {nama:"ihza", umur: "20"}
+      ]
+    );
+  ```
+  
+  <br/>
+  
+  b) Menampilkan banyak data <br/>
+  
+  ```js
+    db.orang.find({});
+    
+    //apabila ada kondisi AND
+    const cursor = db.orang.find({
+      hafi: 'hafi',
+      umur: { $gt: 30 }
+    });
+    
+    //apabila ada kondisi OR
+    const cursor = db.orang.find({
+      $or: [{ nama: 'hafi' }, { umur: { $gt: 10 } }]
+    });
+  ```
+  
+  <br/>
+  
+  c) Menampilkan data spesifik<br/>
+  
+  ```js
+    db.orang.find({nama:"hafi"});
+  ```
+  
+  <br/>
+
+  e) Menambah satu data<br/>
+  
+  ```js
+    db.orang.insertOne( { nama:"farhana",  umur:"20"} )
+    
+    //or
+    
+    db.orang.createIndex( { nama:"farhana",  umur:"20"} )
+    
+    // kedua hal di atas bisa diakses apabila tidak ada database
+  ```
+  
+  f) Menghapus banyak data <br/>
+  
+  ```js
+    db.orang.deleteMany({})
+    
+    // terdapat kondisinya
+    db.orang.deleteMany({ nama : "hafi" })
+  ```
+  
+  <br/>
+  
+  g) Menghapus satu data <br/>
+  
+  ```js
+    db.orang.deleteOne( { nama : "hafi" } )
+  ```
+  
+  <br/>
+
+- ### Relasi Pada MongoDB
+
 ## 3 Mongoose
+- ### Membuat API Specification
+- ### Membuat Web Server dan RESTFul API Menggunakan Mongoose
+
 ## 4 Docker
+- ### Container Pada Docker
+- ### Basic Dari Docker
+
 ## 5 API with Post Man
